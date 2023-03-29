@@ -1,21 +1,23 @@
 {% extends 'base.html' %}
-<!--{% block title %}auth{% endblock %}-->
+{% block title %}auth{% endblock %}
+{% load static %}
 <body>
 {% block content %}
-  <main>
+<main>
     <section class="authentication">
       <div class="authentication__body">
-        <form class="authentication__login" action="">
+        <form class="authentication__login"  method="POST">
+          {% csrf_token %}
           <div class="authentication__login-img">
-            <img src="./images/authentication/logo.png" alt="logo">
+            <img src="{% static 'authentication/img/logo.png' %}" alt="logo" class="logo__img">
           </div>
           <div class="authentication__box">
-            <input class="authentication__box-input" type="text" name="" required="">
+            {{ login_form.login }}
             <label class="authentication__box-label">Username or e-mail</label>
           </div>
           <div class="authentication__box">
-            <input class="authentication__box-input" type="password" name="" required="">
-            <label class="authentication__box-label">Password</label>
+            {{ login_form.password }}
+            <label class="authentication__box-label">password</label>
           </div>
           <a class="authentication__login-forgot" href="#">Forgot password?</a>
           <button class="authentication__button" type="submit">Log in</button>
@@ -27,14 +29,14 @@
 
         <form class="authentication__password" action="">
           <div class="authentication__password-img">
-            <img src="./images/authentication/Castle.svg" alt="Castle">
+            <img src='{% static "authentication/img/Castle.svg" %}' alt="Castle">
           </div>
           <div class="authentication__password-box authentication__box">
             <h5 class="authentication__box-title">Forgot password?</h5>
             <p class="authentication__box-subtitle">Enter your email to receive a reset link</p>
           </div>
           <div class="authentication__box">
-            <input class="authentication__box-input" type="email" name="" required="">
+            <input class="authentication__box-input" type="email" name="" required="" >
             <label class="authentication__box-label">Your e-mail</label>
           </div>
           <button class="authentication__button authentication__password-button" type="submit">Submit</button>
@@ -42,12 +44,6 @@
         </form>
       </div>
     </section>
-  </main>
+</main>
 {% endblock %}
-  <!-- <script src="js/main.min.js"></script> -->
-  <script src="js/main.js"></script>
-  <script src="js/authentication.js"></script>
-
 </body>
-
-</html>
