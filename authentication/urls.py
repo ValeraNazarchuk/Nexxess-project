@@ -1,13 +1,14 @@
 from django.conf.urls.static import static
 from django.conf import settings
 from django.urls import path, include
-from . import views
+from .views import *
 
 app_name = 'authentication'
 
 urlpatterns = [
-    path('', views.index, name='index'),
-    path('login/', views.login_view, name='login'),
+    path('', index, name='index'),
+    path('login/', login_view, name='login'),
+    path('logout/', logout_view, name='account_logout'),
 ]
 
 if settings.DEBUG:

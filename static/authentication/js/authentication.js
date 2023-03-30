@@ -12,3 +12,4 @@ backBtn.addEventListener('click', () => {
   passwordForm.style.display = 'none'
   LoginForm.style.display = 'flex'
 })
+
