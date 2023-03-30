@@ -73,6 +73,9 @@
   -o-transition: 0.5s;
   transition: 0.5s;
 }
+.authentication__box-span {
+  color: #7C48EE;
+}
 
 .authentication__button {
   margin-top: 40px;
@@ -121,6 +124,17 @@
   font-size: 20px;
   line-height: 120%;
   color: #000;
+  text-align: center;
+}
+
+.authentication-input__error {
+  border-color: #EA0000;
+  color: #EA0000;
+}
+
+.authentication-btn__error {
+  background-color: #C2C8D0;
+  color: #fff;
 }
 
 .authentication__login {
@@ -146,6 +160,7 @@
   color: #7C48EE;
   width: 130px;
   margin-top: 20px;
+  cursor: pointer;
 }
 .authentication__login-bottom {
   display: -webkit-box;
@@ -203,6 +218,69 @@
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  cursor: pointer;
+}
+
+.authentication__email-address {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 75px 35px 140px;
+}
+.authentication__email-code {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 75px 35px 100px;
+}
+.authentication__email-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 55px;
+}
+.authentication__email-button {
+  padding: 13px 35px;
+  border: 1px solid transparent;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: auto;
+}
+.authentication__email-button:hover {
+  border: 1px solid #7C48EE;
+  color: #7C48EE;
+  background-color: transparent;
+}
+.authentication__email-bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 40px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+.authentication__email-btn {
+  margin-left: 5px;
+  color: #7C48EE;
+  cursor: pointer;
 }
 
 @media (max-width: 576px) {
@@ -223,5 +301,8 @@
   }
   .authentication__box-subtitle {
     font-size: 16px;
+  }
+  .authentication__email-address, .authentication__email-code {
+    margin: 0;
   }
 }
