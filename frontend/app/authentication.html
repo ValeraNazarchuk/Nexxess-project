@@ -31,7 +31,38 @@
           <button id="authentication__login-button" class="authentication__button" type="submit">Log in</button>
           <div class="authentication__login-bottom">
             <p class="authentication__login-text">Don’t have an account?</p>
-            <button class="authentication__login-register" type="button">Registration</button>
+            <button id="authentication__login-registration" class="authentication__login-registration" type="button">Registration</button>
+          </div>
+        </form>
+
+        <form id="authentication__registration" class="authentication__registration" action="">
+          <div class="authentication__registration-img">
+            <img src="./images/authentication/logo.png" alt="logo">
+          </div>
+          <div class="authentication__box">
+            <input id="authentication-input__username" class="authentication__box-input" type="text" name="" required="">
+            <label class="authentication__box-label">Full Name</label>
+          </div>
+          <div class="authentication__box">
+            <input id="authentication-input__password" class="authentication__box-input" type="text" name="" required="">
+            <label class="authentication__box-label">E-mail</label>
+          </div>
+          <div class="authentication__box">
+            <input id="authentication-input__password" class="authentication__box-input" type="password" name="" required="">
+            <label class="authentication__box-label">Create password</label>
+          </div>
+          <div class="authentication__box authentication__registration-box">
+            <input id="authentication__registration-check" class="authentication__registration-check" type="checkbox" name="" required="">
+            <label class="authentication__registration-label" for="authentication__registration-check">I agree to terms & conditions</label>
+          </div>
+          <div class="authentication__registration-buttons">
+            <button id="authentication__registration-button" class="authentication__button" type="submit">Register Account</button>
+            <p class="authentication__registration-or">or</p>
+            <button id="authentication__registration-button" class="authentication__button authentication__registration-button" type="submit"><img src="./images/authentication/icons_google.svg" alt="google"> Register with Google</button>
+          </div>
+          <div class="authentication__registration-bottom">
+            <p class="authentication__registration-text">Already have an account?</p>
+            <button id="authentication__registration-back" class="authentication__registration-back" type="button">Log In</button>
           </div>
         </form>
 
@@ -39,7 +70,7 @@
           <div class="authentication__password-img">
             <img src="./images/authentication/Castle.svg" alt="Castle">
           </div>
-          <div class="authentication__password-box authentication__box">
+          <div class="authentication__password-box authentication__box-titles">
             <h5 class="authentication__box-title">Forgot password?</h5>
             <p class="authentication__box-subtitle">Enter your email to receive a reset link</p>
           </div>
@@ -57,7 +88,7 @@
             <div class="authentication__email-img">
               <img src="./images/authentication/security.svg" alt="images">
             </div>
-            <div class="authentication__email-box authentication__box">
+            <div class="authentication__email-box authentication__box-titles">
               <h5 class="authentication__box-title">Enter your email address</h5>
               <p class="authentication__box-subtitle authentication__address-subtitle">We’ll sent a password to your email address</p>
             </div>
@@ -72,18 +103,18 @@
             <div class="authentication__email-img">
               <img src="./images/authentication/security.svg" alt="images">
             </div>
-            <div class="authentication__email-box authentication__box">
+            <div class="authentication__email-box authentication__box-titles">
               <h5 class="authentication__box-title">Enter your password</h5>
-              <p class="authentication__box-subtitle authentication__email-subtitle">We sent a code to <span class="authentication__box-span">markishere@gmail.com</span></p>
+              <p class="authentication__box-subtitle authentication__email-subtitle">We sent a code to <span id="authentication__box-span" class="authentication__box-span">markishere@gmail.com</span></p>
             </div>
             <div class="authentication__box">
               <input id="authentication__code-input" class="authentication__box-input" type="password" required="">
               <label class="authentication__box-label">Password</label>
             </div>
-            <button class="authentication__button authentication__email-button" type="submit">Verify my account</button>
+            <button id="authentication__email-button" class="authentication__button authentication__email-button" type="button">Verify my account</button>
             <div class="authentication__email-bottom">
               <p class="authentication__email-text">Haven’t received it?</p>
-              <button class="authentication__email-btn " type="button">Resend a new link</button>
+              <button class="authentication__email-btn" type="button">Resend a new link</button>
           </div>
           </div>
         </form>
