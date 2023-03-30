@@ -4,9 +4,10 @@
 <body>
 {% block content %}
 <main>
+   {% if not user.is_authenticated %}
     <section class="authentication">
       <div class="authentication__body">
-        <form class="authentication__login"  method="POST">
+        <form class="authentication__login"  method="POST" >
           {% csrf_token %}
           <div class="authentication__login-img">
             <img src="{% static 'authentication/img/logo.png' %}" alt="logo" class="logo__img">
@@ -43,7 +44,18 @@
           <a class="authentication__password-back" href="#">Back to Log In</a>
         </form>
       </div>
+
     </section>
+        {% else %}
+        <div class="authentication__selection">
+            <div class="authentication__selection-img">
+              <img src="{% static 'authentication/img/security.svg' %}" alt="images">
+           </div>
+            <div class="authentication__selection-buttons">
+              <button class="authentication__selection-btn" type="button">Text Message</button>
+              <button class="authentication__selection-btn" type="button">Email</button>
+            </div>
+          {% endif %}
 </main>
 {% endblock %}
 </body>
