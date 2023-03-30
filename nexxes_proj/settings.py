@@ -181,7 +181,8 @@ USE_TZ = True
 STATIC_URL = 'static/'
 # STATIC_ROOT = os.path.join(BASE_DIR, STATIC_URL)
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),]
+    os.path.join(BASE_DIR, "static")
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
@@ -198,5 +199,12 @@ ACCOUNT_FORMS = {
     'reset_password_from_key': 'allauth.account.forms.ResetPasswordKeyForm',
     'disconnect': 'allauth.socialaccount.forms.DisconnectForm',
 }
+
+
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'cutrys69@gmail.com'
+EMAIL_HOST_PASSWORD = 'knea ggzc msdt jsep'
+EMAIL_PORT = 587
 
 SITE_ID = 1

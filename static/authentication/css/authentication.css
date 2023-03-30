@@ -73,9 +73,6 @@
   -o-transition: 0.5s;
   transition: 0.5s;
 }
-.authentication__box-span {
-  color: #7C48EE;
-}
 
 .authentication__button {
   margin-top: 40px;
@@ -124,20 +121,12 @@
   font-size: 20px;
   line-height: 120%;
   color: #000;
-  text-align: center;
-}
-
-.authentication-input__error {
-  border-color: #EA0000;
-  color: #EA0000;
-}
-
-.authentication-btn__error {
-  background-color: #C2C8D0;
-  color: #fff;
 }
 
 .authentication__login {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -216,7 +205,23 @@
       align-self: center;
 }
 
-.authentication__selection {
-  display: none;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
+@media (max-width: 576px) {
+  .authentication__body {
+    border: none;
+    max-width: 400px;
+  }
+  .authentication__login,
+  .authentication__password {
+    margin: 0;
+  }
+  .authentication__password-box {
+    margin: 30px 0;
+  }
+  .authentication__box-title {
+    font-size: 26px;
+    line-height: 18px;
+  }
+  .authentication__box-subtitle {
+    font-size: 16px;
+  }
+}

@@ -30,6 +30,7 @@ def login_view(request):
     if request.method == 'POST':
         login_form = CustomLoginForm(request.POST)
         if login_form.is_valid():
+
             return redirect('/')
     else:
         login_form = CustomLoginForm()
