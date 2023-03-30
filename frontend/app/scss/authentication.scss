@@ -65,6 +65,10 @@
     pointer-events: none;
     transition: .5s;
   }
+
+  &-span {
+    color: $fs-purple;
+  }
 }
 
 .authentication__button {
@@ -103,14 +107,26 @@
     font-size: 20px;
     line-height: 120%;
     color: $fs-black;
+    text-align: center;
   }
 }
 
-// _____BLOCK authentication__login_____
+//-----ERROR-STYLE
+
+.authentication-input__error {
+  border-color: #EA0000;
+  color: #EA0000;
+}
+.authentication-btn__error{
+  background-color: $bg-gray;
+  color: $fs-white;
+}
+
+// _____authentication-login_____
 
 .authentication__login {
-  display: flex;
   // display: none;
+  display: flex;
   flex-direction: column;
   margin: 60px;
   &-img {
@@ -127,6 +143,7 @@
     color: $fs-purple;
     width: 130px;
     margin-top: 20px;
+    cursor: pointer;
   }
 
   &-bottom {
@@ -146,10 +163,11 @@
   }
 }
 
-// _____authentication__password_____
+// _____authentication-password_____
 
 .authentication__password {
   display: none;
+  // display: flex;
   flex-direction: column;
   margin: 60px 60px 13px;
   &-img {
@@ -174,8 +192,64 @@
     color: $fs-purple;
     margin-top: 50px;
     align-self: center;
+    cursor: pointer;
   }
 }
+
+// __________Authentication-Email________
+
+.authentication__email {
+  &-address {
+    display: none;
+    // display: flex;
+    flex-direction: column;
+    margin: 75px 35px 140px;
+  }
+  
+  &-code {
+    display: none;
+    // display: flex;
+    flex-direction: column;
+    margin: 75px 35px 100px;
+  }
+  
+  &-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 55px;
+  }
+
+  &-button {
+    padding: 13px 35px;
+    border: 1px solid transparent;
+    align-self: center;
+    width: auto;
+    &:hover {
+      border: 1px solid $border-purple;
+      color: $fs-purple;
+      background-color: transparent;
+    }
+  }
+
+  &-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  &-btn {
+    margin-left: 5px;
+    color: $fs-purple;
+    cursor: pointer;
+  }
+  
+}
+
 
 
 // _________MEDIA-576_______
@@ -203,6 +277,13 @@
     }
     &-subtitle {
       font-size: 16px;
+    }
+  }
+
+  .authentication__email{
+    &-address,
+    &-code {
+      margin: 0;
     }
   }
 }
