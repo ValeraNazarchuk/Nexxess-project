@@ -89,7 +89,7 @@ emailCodeBtn.addEventListener('click', (e) => {
   codeInput.focus()
   codeInput.classList.add('authentication-input__error')
   // codeInput.setAttribute('placeholder', 'Incorrect verification password')
-  emailCodeError.style.display = 'block'
+  emailCodeError.style.display = 'flex'
 
   emailCodeBtn.classList.add('authentication-btn__error')
 })

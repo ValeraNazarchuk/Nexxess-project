@@ -162,9 +162,7 @@
 }
 
 .authentication__login {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -385,7 +383,9 @@
   margin: 75px 35px 140px;
 }
 .authentication__email-code {
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -440,12 +440,20 @@
 
 .authentication__code-error {
   display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 5px 0 0 5px;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0.15px;
   color: #EA0000;
+}
+.authentication__code-error img {
+  margin-right: 5px;
+  width: 15px;
+  height: 15px;
 }
 
 @media (max-width: 576px) {
