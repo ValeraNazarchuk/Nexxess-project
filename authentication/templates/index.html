@@ -3,22 +3,19 @@
 <body>
 {% block content %}
   <main class="main">
-    <div class="page">
+
+      <div class="page">
         <ul class="page__list">
           <li class="page__item">
-            <a href='login' class="link">Сторінка аутентифікації</a>
-            <a href='logout' class="link">Сторінка виходу</a>
-
+            <a href='{% url "account_login" %}' class="page__link">Сторінка аутентифікації</li>
+          <li class="page__item">
+            <a href='{% url "account_logout" %}' class="page__link">Сторінка виходу</a>
           </li>
-
-          <!-- <li class="page__item">
-            <a href="catalog.html" class="page__link">Сторінка каталогу</a>
-          </li> -->
+          <li class="page__item">
+            <a href='admin/' class="page__link">Adminka</a>
+          </li>
         </ul>
-    </div>
-  </main>
+      </div>
+    </main>
 {% endblock %}
-</body>
-
-</html>
-
+  </body>
