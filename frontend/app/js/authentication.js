@@ -67,6 +67,7 @@ const emailCodeBlock = document.querySelector('#authentication__email-code')
 const codeInput = document.querySelector('#authentication__code-input')
 const emailCodeText = document.querySelector('#authentication__box-span')
 const emailCodeBtn = document.querySelector('#authentication__email-button')
+const emailCodeError = document.querySelector('#authentication__code-error')
 
 
 // Подія для кнопки *Send Code*
@@ -85,9 +86,10 @@ addressBtn.addEventListener('click', () => {
 // времений код вивода ошибки при підтвердженні коду яких приходить на пошту
 emailCodeBtn.addEventListener('click', (e) => {
   codeInput.value = ''
+  codeInput.focus()
   codeInput.classList.add('authentication-input__error')
-  codeInput.setAttribute('placeholder', 'Incorrect verification password')
+  // codeInput.setAttribute('placeholder', 'Incorrect verification password')
+  emailCodeError.style.display = 'block'
 
   emailCodeBtn.classList.add('authentication-btn__error')
-  // emailCodeBtn.setAttribute('disabled', 'disabled')
 })

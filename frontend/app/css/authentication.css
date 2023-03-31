@@ -27,6 +27,40 @@
 
 .authentication__box {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.authentication__box-titles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+}
+.authentication__box-title {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 24px;
+  color: #000;
+}
+.authentication__box-subtitle {
+  margin-top: 20px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 120%;
+  color: #000;
+  text-align: center;
 }
 .authentication__box + .authentication__box {
   margin-top: 20px;
@@ -100,48 +134,11 @@
   background-color: #D9CC46;
 }
 
-.authentication__box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.authentication__box-titles {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-bottom: 20px;
-}
-.authentication__box-title {
-  font-weight: 600;
-  font-size: 32px;
-  line-height: 24px;
-  color: #000;
-}
-.authentication__box-subtitle {
-  margin-top: 20px;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 120%;
-  color: #000;
-  text-align: center;
-}
-
 .authentication-input__error {
   border-color: #EA0000;
 }
 .authentication-input__error:focus {
   border-color: #EA0000;
-  color: #EA0000;
 }
 .authentication-input__error::-webkit-input-placeholder {
   color: #EA0000;
@@ -222,6 +219,15 @@
 }
 .authentication__registration-img img {
   width: 100%;
+}
+.authentication__registration-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 20px;
 }
 .authentication__registration-check {
   position: relative;
@@ -430,6 +436,16 @@
   margin-left: 5px;
   color: #7C48EE;
   cursor: pointer;
+}
+
+.authentication__code-error {
+  display: none;
+  margin: 5px 0 0 5px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+  color: #EA0000;
 }
 
 @media (max-width: 576px) {
