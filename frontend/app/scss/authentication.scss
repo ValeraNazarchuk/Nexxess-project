@@ -135,8 +135,8 @@
 // _____authentication-login_____
 
 .authentication__login {
-  display: none;
-  // display: flex;
+  // display: none;
+  display: flex;
   flex-direction: column;
   margin: 60px;
   &-img {
@@ -332,8 +332,8 @@
   }
   
   &-code {
-    // display: none; 
-    display: flex;
+    display: none; 
+    // display: flex;
     flex-direction: column;
     margin: 75px 35px 100px;
   }
