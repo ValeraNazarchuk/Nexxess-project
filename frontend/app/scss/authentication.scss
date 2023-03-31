@@ -387,12 +387,26 @@
     margin: 0;
   }
 
+  .authentication__registration {
+    &-img {
+      margin-bottom: 20px;
+    }
+    &-or {
+      margin: 10px 0;
+    }
+    &-bottom {
+      margin-top: 15px;
+    }
+  }
 
   .authentication__password-box {
     margin: 30px 0;
   }
 
   .authentication__box {
+    & + & {
+      margin-top: 10px;
+    }
     &-title {
       font-size: 26px;
       line-height: 18px;

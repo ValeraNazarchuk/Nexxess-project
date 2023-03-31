@@ -442,8 +442,20 @@
   .authentication__password {
     margin: 0;
   }
+  .authentication__registration-img {
+    margin-bottom: 20px;
+  }
+  .authentication__registration-or {
+    margin: 10px 0;
+  }
+  .authentication__registration-bottom {
+    margin-top: 15px;
+  }
   .authentication__password-box {
     margin: 30px 0;
+  }
+  .authentication__box + .authentication__box {
+    margin-top: 10px;
   }
   .authentication__box-title {
     font-size: 26px;
