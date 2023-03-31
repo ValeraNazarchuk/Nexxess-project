@@ -98,7 +98,8 @@ ACCOUNT_FORMS = {
 
 SITE_ID = 1
 
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = '/'    # redirect when log out
+
 
 SOCIALACCOUNT_LOGIN_ON_GET = True
 

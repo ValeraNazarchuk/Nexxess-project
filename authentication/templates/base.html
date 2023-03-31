@@ -18,7 +18,84 @@
     {% block content %}
 
     {% endblock %}
-  <script src="{% static 'authentication/js/main.js' %}"></script>
+      <script src="{% static 'authentication/js/main.js' %}"></script>
   <script src="{% static 'authentication/js/authentication.js' %}"></script>
+<script src="{% static 'authentication/js/test.js' %}"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#login-button').click(function(event) {
+            event.preventDefault();
+            $.ajax({
+                url: '{% url "account_login" %}',
+                type: 'POST',
+                data: $('#login-form').serialize(),
+                success: function(response) {
+                    window.location.href = '{{ request.path }}';
+                },
+                error: function(xhr, status, error) {
+                    $('.authentication__box-input').val('');
+                    $('.authentication__box-input').addClass('invalid');
+                }
+            });
+        });
+    });
+</script>
+    <script>
+   $(document).ready(function() {
+    // Проверяем, есть ли уже сохраненные настройки
+    var emailAddressVisible = localStorage.getItem('emailAddressVisible');
+    var emailCodeVisible = localStorage.getItem('emailCodeVisible');
+
+    // Если есть, то применяем их
+    if (emailAddressVisible == 'hidden') {
+        $('#authentication__email-address').hide();
+    }
+    if (emailCodeVisible == 'visible') {
+        $('#authentication__email-code').show();
+        // Через 10 секунд скрываем email-code и показываем email-address
+        setTimeout(function() {
+            $('#authentication__email-code').hide();
+            $('#authentication__email-address').show();
+            localStorage.setItem('emailAddressVisible', 'visible');
+            localStorage.setItem('emailCodeVisible', 'hidden');
+        }, 10000);
+    }
+
+    // Обрабатываем нажатие кнопки
+    $('#authentication__address-btn').click(function(e) {
+        e.preventDefault();
+        // Скрываем адрес
+        $('#authentication__email-address').hide();
+        // Показываем код
+        $('#authentication__email-code').show();
+        // Сохраняем настройки в localStorage на 10 секунд
+        localStorage.setItem('emailAddressVisible', 'hidden');
+        localStorage.setItem('emailCodeVisible', 'visible');
+        setTimeout(function() {
+            $('#authentication__email-code').hide();
+            $('#authentication__email-address').show();
+            localStorage.setItem('emailAddressVisible', 'visible');
+            localStorage.setItem('emailCodeVisible', 'hidden');
+        }, 10000);
+    });
+
+    // Проверяем localStorage настройки каждые 10 секунд
+    setInterval(function() {
+        var emailAddressVisible = localStorage.getItem('emailAddressVisible');
+        var emailCodeVisible = localStorage.getItem('emailCodeVisible');
+        if (emailAddressVisible == 'visible' && emailCodeVisible == 'hidden') {
+            localStorage.clear();
+        }
+    }, 10000);
+});
+
+    </script>
+    <style>
+    .invalid {
+        border: 1px solid red;
+    }
+</style>
+
 </body>
 </html>
