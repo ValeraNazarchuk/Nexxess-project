@@ -312,6 +312,13 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.authentication__registration-button:hover {
+  background-color: #7C48EE;
+  color: #fff;
 }
 .authentication__registration-button img {
   margin-right: 10px;
@@ -462,8 +469,8 @@
     max-width: 400px;
   }
   .authentication__login,
-  .authentication__registration,
-  .authentication__password {
+.authentication__registration,
+.authentication__password {
     margin: 0;
   }
   .authentication__registration-img {
