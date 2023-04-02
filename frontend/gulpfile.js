@@ -132,11 +132,11 @@ function images() {
   return gulp
     .src(paths.images.src)
     .pipe(newer(paths.images.dest))
-    .pipe(
-      imagemin({
-        progressive: true,
-      })
-    )
+    // .pipe(
+    //   imagemin({
+    //     progressive: true,
+    //   })
+    // )
     .pipe(
       size({
         showFiles: true, //показує розмір кожного фото
