@@ -1,68 +1,5 @@
 @import 'vars';
-
-.header {
-  &__inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 40px 0 20px;
-    position: relative;
-    &::before {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 1px;
-      background-color: $bg-gray;
-    }
-  }
-
-  .nav {
-    &__list {
-      display: flex;  
-      align-items: center;
-      gap: 10px;
-
-    }
-    &__item-link {
-      padding: 10px 45px;
-      border: 1px solid $border-purple;
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.05));
-      border-radius: 2px;
-      color: $fs-purple;
-      font-weight: 500;
-      font-size: 16px;
-      line-height: 24px;
-      transition: all .5s;
-      &:hover {
-        background-color: $bg-purple;
-        color: $fs-white;
-      }
-    }
-  }
-
-  &__box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    &-text {
-      margin: 4px 0px;
-      color: $fs-dark;
-      font-weight: 500;
-      font-size: 16px;
-      line-height: 24px;
-    }
-
-    &-link {
-      font-weight: 500;
-      font-size: 14px;
-      line-height: 24px;
-      color: $fs-purple;
-    }
-  }
-}
+@import 'global';
 
 .main {
   margin: 30px 0 70px;
@@ -89,19 +26,39 @@
       justify-content: space-between;
       width: 100%;
       padding: 11px 18px;
-      border: 1px solid $border-blue;
+      border: 1px solid $border-gray;
       border-radius: 4px 4px 0px 0px;
     }
     
-    &-info {
-      width: 99%;
+    &-list {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border: 1px solid $border-gray;
+      border-top: none;
+      border-radius: 0px 0px 8px 8px;
+    }
+    
+    &-item {
+      padding: 11px 24px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 11px 24px;
-      border: 1px solid $border-blue;
-      border-top: none;
-      border-radius: 0px 0px 8px 8px;
+    }
+
+    &-text {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 14px;
+      color: $fs-dark;
+    }
+    
+    &-money {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+      color: $fs-blue;
     }
   }
 
@@ -118,26 +75,10 @@
       font-size: 12px;
       line-height: 18px;
       color: $fs-blue;
-      padding: 2px 6px;
+      padding: 2px 8px;
       border: 1px solid $border-blue;
       border-radius: 50%;
-      height: 22px;
     }
-    
-    &-text {
-      font-weight: 400;
-      font-size: 12px;
-      line-height: 14px;
-      color: $fs-dark;
-    }
-    
-    &-money {
-      font-weight: 400;
-      font-size: 12px;
-      line-height: 18px;
-      color: $fs-blue;
-    }
-
     &-arrow {
         transition: all .5s;
     }
@@ -163,7 +104,7 @@
       border-radius: 0px 0px 8px 8px;
       max-height: 0;
       overflow: hidden;
-      transition: max-height 0.3s ease-out;
+      transition: all 0.3s ease-out;
     }
 
     &-item {
@@ -172,9 +113,15 @@
       font-size: 12px;
       line-height: 14px;
       transition: all .5s;
+      cursor: pointer;
       &:hover {
         background-color: $bg-blue;
       }
+    }
+    &-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
   }
 }
@@ -231,6 +178,12 @@
       border: none;
       &::placeholder {
         color: $fs-black;
+        transition: all .3s;
+      }
+      &:focus {
+        &::placeholder {
+          color: $fs-gray;
+        }
       }
     }
   }
@@ -259,7 +212,7 @@
       }
     }
 
-    &-title {
+    &-link{
       background: linear-gradient(360deg, #7842F6 0%, #509CE9 100%);
       border-radius: 4px;
       font-weight: 500;
@@ -344,20 +297,5 @@
       line-height: 130%;
       color: $fs-black;
     }
-  }
-  .number--green {
-    color: #0DA94F;
-  }
-  .number--yellow {
-    color: #FBBC09;
-  }
-  .number--blue {
-    color: #509CE9;
-  }
-  .number--dark {
-    color: #312D3A;
-  }
-  .number--gray {
-    color: #C2C8D0;
   }
 }

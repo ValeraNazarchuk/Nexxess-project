@@ -42,3 +42,88 @@ body {
   line-height: 130%;
   color: $fs-purple;
 }
+
+// _____HEADER_____
+
+.header {
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 0 20px;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: $bg-gray;
+    }
+  }
+
+  .nav {
+    &__list {
+      display: flex;  
+      align-items: center;
+      gap: 10px;
+
+    }
+    &__item-link {
+      padding: 10px 45px;
+      border: 1px solid $border-purple;
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.05));
+      border-radius: 2px;
+      color: $fs-purple;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      transition: all .5s;
+      &:hover {
+        background-color: $bg-purple;
+        color: $fs-white;
+      }
+    }
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-text {
+      margin: 4px 0px;
+      color: $fs-dark;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    &-link {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 24px;
+      color: $fs-purple;
+    }
+  }
+}
+
+.number--green {
+  color: #0DA94F;
+}
+.number--red {
+  color: #EA0000;
+}
+.number--yellow {
+  color: #FBBC09;
+}
+.number--blue {
+  color: #509CE9;
+}
+.number--dark {
+  color: #312D3A;
+}
+.number--gray {
+  color: #C2C8D0;
+}
