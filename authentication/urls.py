@@ -6,9 +6,12 @@ from .views import *
 app_name = 'authentication'
 
 urlpatterns = [
-    path('', index, name='index'),
+    path('', main, name='main'),
     path('login/', login_view, name='login'),
     path('logout/', logout_view, name='account_logout'),
+    path('invoices/', invoices, name='invoices'),
+    path('support/', support, name='support'),
+    path('services/', services, name='services'),
 ]
 
 if settings.DEBUG:
