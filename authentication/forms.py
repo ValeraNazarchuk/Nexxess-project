@@ -77,17 +77,7 @@ class CustomSignupForm(SignupForm):
         # self.fields['agree_terms'].label = 'I agree to terms & conditions'
 
 
-    #     # меняем лейблы полей
-    #     self.fields['name'].label = 'Your name'
-    #     self.fields['email'].label = 'Email'
-    #     self.fields['password1'].label = 'Create password'
-    #
-    # def save(self):
-    #     data = self.cleaned_data
-    #     user = User(email=data['email'],
-    #                 passwor1=data['password1'],
-    #                 name=data['name'])
-    #     user.save()
+ 
 
 
     def save(self, request):
@@ -95,6 +85,7 @@ class CustomSignupForm(SignupForm):
         user.name = self.cleaned_data.get('name')
         user.save()
         return user
+
 
 
 class CustomResetPasswordForm(ResetPasswordForm):
