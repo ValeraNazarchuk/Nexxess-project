@@ -168,6 +168,7 @@ ACCOUNT_FORMS = {
 
 
 LOGIN_REDIRECT_URL = '/'
+SIGNUP_REDIRECT_URL = '/'
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
@@ -175,6 +176,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 # #
+EMAIL_BACKEND = 'django.core.mail.backends.dummy.EmailBackend'
 
 SOCIALACCOUNT_LOGIN_ON_GET = True
 
