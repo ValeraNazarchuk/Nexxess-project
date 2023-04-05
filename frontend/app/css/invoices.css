@@ -606,11 +606,19 @@ body {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  margin: 15px 0;
+  padding: 10px 0;
+  margin: 0;
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
   position: relative;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.content__body-item:hover {
+  background-color: #ebebeb;
 }
 .content__body-number {
   position: absolute;

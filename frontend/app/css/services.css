@@ -289,7 +289,6 @@ body {
   transition: all 0.3s ease-out;
 }
 .aside__accordion-item {
-  padding: 14px 24px;
   font-weight: 400;
   font-size: 12px;
   line-height: 14px;
@@ -304,101 +303,24 @@ body {
           justify-content: space-between;
   gap: 8px;
 }
-.aside__accordion-text {
-  width: 30px;
-}
-.aside__accordion-label {
-  cursor: pointer;
+.aside__accordion-link {
+  padding: 14px 24px;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-.aside__accordion-label:hover .aside__accordion-check::before {
-  border-color: #85B7F0;
-}
-.aside__accordion-check {
-  position: relative;
-  margin-right: 12px;
-  cursor: pointer;
-}
-.aside__accordion-check::after {
-  content: url(../images/invoices/check.svg);
-  position: absolute;
-  width: 13px;
-  height: 14px;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  opacity: 0;
-  z-index: 1;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
-}
-.aside__accordion-check::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  background: #fff;
-  width: 20px;
-  height: 20px;
-  border: 1px solid #C2C8D0;
-  border-radius: 5px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
 }
-.aside__accordion-check:checked::after {
-  opacity: 1;
-}
-.aside__accordion-check:checked::before {
+.aside__accordion-link:hover {
   background-color: #85B7F0;
-}
-.aside__accordion-select {
-  border-color: #C2C8D0;
-  border-radius: 4px;
-  padding: 3px 0;
-  background-color: #fff;
-  outline: 0;
-}
-.aside__accordion-select::-webkit-scrollbar {
-  width: 10px;
-  background-color: white;
-}
-.aside__accordion-select::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  background-color: #C2C8D0;
-}
-.aside__accordion-btn {
-  padding: 13px 0;
-  color: #fff;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-  width: 100%;
-  background-color: #7C48EE;
-  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
-          box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
-  border: 1px solid transparent;
-  border-radius: 4px;
-  cursor: pointer;
-  -webkit-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s;
-}
-.aside__accordion-btn:hover {
-  background-color: #fff;
-  border-color: #7C48EE;
-  color: #7C48EE;
 }
 
 .accordion__top--active {

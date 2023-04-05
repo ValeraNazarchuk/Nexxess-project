@@ -358,12 +358,20 @@
       display: flex;
       align-items: center;
       justify-content: space-around;
-      margin: 15px 0;
+      padding: 10px 0;
+      margin: 0;
       font-weight: 400;
       font-size: 16px;
       line-height: 150%;
       position: relative;
+      transition: all .5s;
+      cursor: pointer;
+      &:hover {
+        background-color: #ebebeb;
+      }
     }
+
+    
 
     &-number {
       position: absolute;

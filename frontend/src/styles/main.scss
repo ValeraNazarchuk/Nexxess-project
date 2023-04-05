@@ -108,20 +108,21 @@
     }
 
     &-item {
-      padding: 14px 24px;
       font-weight: 400;
       font-size: 12px;
       line-height: 14px;
-      transition: all .5s;
       cursor: pointer;
-      &:hover {
-        background-color: $bg-blue;
-      }
     }
     &-link {
+      padding: 14px 24px;
+      width: 100%;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      transition: all .5s;
+      &:hover {
+        background-color: $bg-blue;
+      }
     }
   }
 }
