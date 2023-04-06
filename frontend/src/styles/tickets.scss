@@ -552,3 +552,146 @@
   border: 1px solid $bg-purple;
   max-height: 20vh;
 }
+
+//________POPUP_WINDIW_________
+
+.popup {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  padding: 30px 15px;
+  color: #000;
+  visibility: hidden;
+  transition: visibility 0.8s ease 0s;
+
+  &::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    opacity: 0;
+    transition: opacity 0.8s ease 0s;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 auto;
+    width: 100%;
+    min-height: 100%;
+  }
+
+  &__body {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    transform: scale(0);
+    transition: all 0.3s ease 0s;
+  }
+
+  &__close {
+    padding: 10px;
+    border-radius: 50px;
+    border: 1px solid #000;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 30;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    &::after,
+    &::before {
+      content: '';
+      position: absolute;
+      right: 0;
+      width: 100%;
+      height: 0.125rem;
+      background-color: #000;
+      transition: all 0.3s ease 0s;
+    }
+
+    &::after {
+      bottom: calc(50% - 0.0625rem);
+      transform: rotate(45deg);
+    }
+
+    &::before {
+      top: calc(50% - 0.0625rem);
+      transform: rotate(-45deg);
+    }
+
+    &:hover {
+      &::after,
+      &::before {
+        background-color: $bg-purple;
+      } 
+    }
+  }
+
+  &.show {
+    visibility: visible;
+    overflow: auto;
+
+    &::before {
+      opacity: 1;
+    }
+
+    .popup__body {
+      transform: scale(1);
+      transition: all 0.3s ease 0.2s;
+    }
+  }
+}
+
+.popup__box {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.popup__input {
+    width: 100%;
+    outline: 0;
+    border: none;
+    border-bottom: 2px solid #0f0f0f;
+    padding: 10px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: .07em;
+}
+
+.popup__btn {
+    margin-top: 20px;
+    width: 100%;
+    align-self: center;
+    max-width: 150px;
+    padding: 10px 0;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: .07em;
+    color: #fff;
+    background-color: $bg-purple;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all .5s;
+    &:hover {
+      background-color: transparent;
+      border-color: $border-purple;
+      color: $fs-purple;
+    }
+}

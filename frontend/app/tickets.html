@@ -339,10 +339,21 @@
                           <li class="content__form-item">#Tag 2</li>
                           <li class="content__form-item">#Tag 3</li>
                         </ul>
-                      <button class="content__form-btn" type="button">New tag</button>
+                      <button id="form__new-tag" class="content__form-btn" type="button">New tag</button>
+                        <div class="popup">
+                          <div class="popup__content">
+                              <div class="popup__body">
+                                  <button class="popup__close" type="button"></button>
+                                  <div class="popup__box">
+                                    <p class="popup__text">Create new tag</p>
+                                    <input class="popup__input" type="text" placeholder="Enter email">
+                                    <button class="popup__btn" type="submit">Create</button>
+                                  </div>
+                              </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                    
                     <div class="content__form-duration">
                       <h5 class="content__form-title">Determine the duration:</h5>
                       <div class="content__form-selects">
@@ -534,7 +545,7 @@
                     <img src="./images/invoices/arrow-drop-down.svg" alt="icon">
                     <p class="content__top-numbers">of 245</p>
                     <ul id="content__top-list" class="content__top-list">
-                      <li class="content__top-item">10</li>
+                      <li class="content__top-item">5</li>
                       <li class="content__top-item">50</li>
                       <li class="content__top-item">100</li>
                       <li class="content__top-item">All</li>
