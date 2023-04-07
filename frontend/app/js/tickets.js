@@ -36,6 +36,7 @@ const btnNewTag = document.querySelector('#form__new-tag')
 
 const popup = document.querySelector('.popup')
 const popupClose = document.querySelector('.popup__close')
+const popupInput = document.querySelector('#popup__input')
 
 // ----------OPEN POPUP----------
 btnNewTag.addEventListener('click', (e) => {
@@ -44,6 +45,12 @@ btnNewTag.addEventListener('click', (e) => {
   document.body.style.cssText = `overflow: hidden;`
 })
 
+// adding # to the beginning of input
+popupInput.addEventListener('click', () => {
+  popupInput.value = '#'
+})
+
+// close on click on overlay
 popupClose.addEventListener('click', (e) => {
   popup.classList.remove('show')
   document.body.style.cssText = ''

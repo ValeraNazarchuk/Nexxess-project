@@ -14,7 +14,10 @@
       <div class="container">
         <div class="header__inner">
           <a class="header__link" href="./main.html">
-            <img src="./images/logo.png" alt="logo">
+            <picture>
+              <source srcset="./images/logo-mobile.png" media="(max-width: 800px)">
+              <img src="./images/logo.png" alt="logo">
+            </picture>
           </a>
 
           <nav class="nav">
@@ -30,6 +33,9 @@
               </li>
               <li class="nav__list-item">
                 <a class="nav__item-link" href="./services.html">Services</a>
+              </li>
+              <li class="nav__list-item">
+                <a class="nav__item-link" href="№">FAQ</a>
               </li>
             </ul>
           </nav>
@@ -342,14 +348,14 @@
                       <button id="form__new-tag" class="content__form-btn" type="button">New tag</button>
                         <div class="popup">
                           <div class="popup__content">
-                              <div class="popup__body">
-                                  <button class="popup__close" type="button"></button>
-                                  <div class="popup__box">
-                                    <p class="popup__text">Create new tag</p>
-                                    <input class="popup__input" type="text" placeholder="Enter email">
-                                    <button class="popup__btn" type="submit">Create</button>
-                                  </div>
+                            <div class="popup__body">
+                              <button class="popup__close" type="button"></button>
+                              <div class="popup__box">
+                                <h5 class="popup__text">Create new tag</h5>
+                                <input id="popup__input" class="popup__input" type="text" placeholder="#newtag">
+                                <button class="popup__btn" type="button">Create</button>
                               </div>
+                            </div>
                           </div>
                         </div>
                       </div>

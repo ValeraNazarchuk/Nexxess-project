@@ -110,6 +110,9 @@ body {
       -ms-flex-align: center;
           align-items: center;
 }
+.header__box-mobile {
+  display: none;
+}
 .header__box-text {
   margin: 4px 0px;
   color: #312D3A;
@@ -148,6 +151,85 @@ body {
   color: #C2C8D0;
 }
 
+@media (max-width: 1000px) {
+  .header .nav__item-link {
+    padding: 10px 20px;
+  }
+}
+@media (max-width: 800px) {
+  .header__inner {
+    padding: 20px 0;
+  }
+  .header .nav__item-link {
+    font-size: 14px;
+    line-height: 20px;
+    padding: 10px;
+  }
+}
+@media (max-width: 700px) {
+  .header__box {
+    display: none;
+  }
+  .burger {
+    z-index: 10;
+    cursor: pointer;
+  }
+  .burger::after, .burger::before {
+    content: "";
+    display: block;
+    width: 25px;
+    border: 2px solid #7C48EE;
+    border-radius: 10px;
+    -webkit-transition: -webkit-transform 0.4s;
+    transition: -webkit-transform 0.4s;
+    -o-transition: transform 0.4s;
+    transition: transform 0.4s;
+    transition: transform 0.4s, -webkit-transform 0.4s;
+  }
+  .burger.burger--active span {
+    display: none;
+  }
+  .burger.burger--active::after {
+    content: "";
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    background-color: #7C48EE;
+  }
+  .burger.burger--active::before {
+    content: "";
+    -webkit-transform: translateY(4px) rotate(45deg);
+        -ms-transform: translateY(4px) rotate(45deg);
+            transform: translateY(4px) rotate(45deg);
+    background-color: #7C48EE;
+  }
+  .burger-line {
+    display: block;
+    width: 25px;
+    border: 2px solid #7C48EE;
+    border-radius: 10px;
+    margin: 4px 0;
+  }
+}
+@media (max-width: 550px) {
+  .header__inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .header .nav {
+    margin-top: 10px;
+  }
+  .burger {
+    position: absolute;
+    top: 30px;
+    right: 15px;
+  }
+}
 .main {
   margin: 30px 0;
 }
@@ -573,6 +655,14 @@ body {
   font-size: 16px;
   line-height: 130%;
 }
+.content__form-select::-webkit-scrollbar {
+  width: 10px;
+  background-color: white;
+}
+.content__form-select::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #C2C8D0;
+}
 .content__form-times {
   margin-top: 10px;
   -webkit-box-pack: center;
@@ -931,6 +1021,12 @@ body {
 .popup__close:hover::after, .popup__close:hover::before {
   background-color: #7C48EE;
 }
+.popup__text {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 130%;
+  color: #7C48EE;
+}
 .popup.show {
   visibility: visible;
   overflow: auto;
@@ -958,19 +1054,60 @@ body {
 }
 
 .popup__input {
+  margin: 20px 0;
   width: 100%;
   outline: 0;
   border: none;
-  border-bottom: 2px solid #0f0f0f;
+  border-bottom: 2px solid #7C48EE;
   padding: 10px;
   font-weight: 700;
-  font-size: 18px;
-  line-height: 22px;
+  font-size: 14px;
+  line-height: 18px;
   letter-spacing: 0.07em;
+}
+.popup__input::-webkit-input-placeholder {
+  color: #000;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+.popup__input::-moz-placeholder {
+  color: #000;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+.popup__input:-ms-input-placeholder {
+  color: #000;
+  -ms-transition: all 0.4s;
+  transition: all 0.4s;
+}
+.popup__input::-ms-input-placeholder {
+  color: #000;
+  -ms-transition: all 0.4s;
+  transition: all 0.4s;
+}
+.popup__input::placeholder {
+  color: #000;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+}
+.popup__input:focus::-webkit-input-placeholder {
+  color: #858585;
+}
+.popup__input:focus::-moz-placeholder {
+  color: #858585;
+}
+.popup__input:focus:-ms-input-placeholder {
+  color: #858585;
+}
+.popup__input:focus::-ms-input-placeholder {
+  color: #858585;
+}
+.popup__input:focus::placeholder {
+  color: #858585;
 }
 
 .popup__btn {
-  margin-top: 20px;
   width: 100%;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;

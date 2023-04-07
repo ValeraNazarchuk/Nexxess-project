@@ -361,6 +361,15 @@
       font-weight: 400;
       font-size: 16px;
       line-height: 130%;
+      &::-webkit-scrollbar {
+        width: 10px;
+        background-color: white;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background-color: $border-gray;
+      } 
     }
 
     &-times {
@@ -640,6 +649,13 @@
     }
   }
 
+  &__text {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 130%;
+    color: $fs-purple;
+  }
+
   &.show {
     visibility: visible;
     overflow: auto;
@@ -662,19 +678,28 @@
 
 
 .popup__input {
+    margin: 20px 0;
     width: 100%;
     outline: 0;
     border: none;
-    border-bottom: 2px solid #0f0f0f;
+    border-bottom: 2px solid $border-purple;
     padding: 10px;
     font-weight: 700;
-    font-size: 18px;
-    line-height: 22px;
+    font-size: 14px;
+    line-height: 18px;
     letter-spacing: .07em;
+    &::placeholder {
+      color: $fs-black;
+      transition: all .4s;
+    }
+    &:focus {
+      &::placeholder {
+        color: $fs-gray;
+      }
+    }
 }
 
 .popup__btn {
-    margin-top: 20px;
     width: 100%;
     align-self: center;
     max-width: 150px;

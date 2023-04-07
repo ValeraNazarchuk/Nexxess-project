@@ -13,12 +13,12 @@
     <header class="header">
       <div class="container">
         <div class="header__inner">
-          <img src="./images/logo.png" alt="logo">
+          <picture>
+            <source srcset="./images/logo-mobile.png" media="(max-width: 600px)">
+            <img src="./images/logo.png" alt="logo">
+          </picture>
 
           <nav class="nav">
-            <a class="nav__burger">
-              <span class="nav__burger-line"></span>
-            </a>
             <ul class="nav__list">
               <li class="nav__list-item">
                 <a class="nav__item-link" href="./invoices.html">Invoices</a>
@@ -28,6 +28,9 @@
               </li>
               <li class="nav__list-item">
                 <a class="nav__item-link" href="./services.html">Services</a>
+              </li>
+              <li class="nav__list-item">
+                <a class="nav__item-link" href="№">FAQ</a>
               </li>
             </ul>
           </nav>
@@ -39,6 +42,10 @@
             <p class="header__box-text">Hello, John John</p>
             <a class="header__box-link" href="#">Log Out</a>
           </div>
+
+          <a class="burger">
+            <span class="burger-line"></span>
+          </a>
         </div>
       </div>
     </header>
@@ -48,6 +55,12 @@
       <div class="container">
         <div class="main__inner">
           <aside class="aside">
+              <div class="mobile__box">
+                <a class="mobile__box-user" href="#">
+                  <img class="mobile__box-img" src="./images/user.svg" alt="user">
+                </a>
+                <p class="mobile__box-text">Hello, John John</p>
+              </div>
               <div class="aside__box">
                 <div class="aside__box-top">
                   <img class="aside__top-img" src="./images/important.svg" alt="icon">
