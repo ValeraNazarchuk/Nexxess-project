@@ -29,3 +29,21 @@ contentTopItem.forEach((item) => {
     contentTopNumber.textContent = item.textContent
   })
 })
+
+//________BURGER_____
+
+const aside = document.querySelector('.aside')
+const burger = document.querySelector('.burger')
+
+burger.addEventListener('click', menu)
+
+function menu() {
+  burger.classList.toggle('burger--active')
+  aside.classList.toggle('aside--active')
+
+  const overflowValue = burger.classList.contains('burger--active')
+    ? 'hidden'
+    : 'auto'
+
+  document.body.style.overflow = overflowValue
+}

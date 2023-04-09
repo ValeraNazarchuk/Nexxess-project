@@ -170,11 +170,8 @@ body {
       display: none;
     }
   }
-
-  
-
     .burger {
-      z-index: 10;
+      z-index: 15;
       cursor: pointer;
       &::after,
       &::before {

@@ -6,33 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NEXXESS</title>
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/about-service.css" />
+    <link rel="stylesheet" href="css/main.css" />
   </head>
 
   <body>
     <header class="header">
       <div class="container">
         <div class="header__inner">
-          <a class="header__link" href="./main.html">
+          <picture>
+            <source srcset="./images/logo-mobile.png" media="(max-width: 600px)">
             <img src="./images/logo.png" alt="logo">
-          </a>
+          </picture>
 
           <nav class="nav">
-            <a class="nav__burger">
-              <span class="nav__burger-line"></span>
-            </a>
             <ul class="nav__list">
               <li class="nav__list-item">
-                <a class="nav__item-link" href="./main.html">Main</a>
+                <a class="nav__item-link" href="./invoices.html">Invoices</a>
               </li>
               <li class="nav__list-item">
                 <a class="nav__item-link" href="#">Support</a>
               </li>
               <li class="nav__list-item">
                 <a class="nav__item-link" href="./services.html">Services</a>
-              </li>
-              <li class="nav__list-item">
-                <a class="nav__item-link" href="./invoices.html">Invoices</a>
               </li>
               <li class="nav__list-item">
                 <a class="nav__item-link" href="№">FAQ</a>
@@ -88,24 +83,25 @@
                 </ul>
               </div>
 
-
               <div class="aside__accordion">
                 <div id="aside__accordion-top" class="aside__accordion-top">
-                  <img class="aside__top-img" src="./images/services.svg" alt="icon">
-                  <h6 class="aside__top-title">Your servises</h6>
+                  <img class="aside__top-img" src="./images/credit-card.svg" alt="icon">
+                  <h6 class="aside__top-title">Payments</h6>
                   <img class="aside__top-arrow" src="./images/chevron-down.svg" alt="icon">
                 </div>
 
                 <ul class="aside__accordion-list">
                   <li class="aside__accordion-item">
-                    <a class="aside__accordion-link" href="#">Your servises 1</a>
+                    <a class="aside__accordion-link" href="#">Paypall</a>
                   </li>
                   <li class="aside__accordion-item">
-                    <a class="aside__accordion-link" href="#">Your servises 1</a>
+                    <a class="aside__accordion-link" href="#">Payoneer</a>
+                  </li>
+                  <li class="aside__accordion-item">
+                    <a class="aside__accordion-link" href="#">Fondy</a>
                   </li>
                 </ul>
               </div>
-
               <div class="aside__accordion">
                 <div id="aside__accordion-top" class="aside__accordion-top">
                   <img class="aside__top-img" src="./images/tickets.svg" alt="icon">
@@ -128,64 +124,24 @@
                   </li>
                 </ul>
               </div>
-
-              <div class="aside__accordion">
-                <div id="aside__accordion-top" class="aside__accordion-top">
-                  <img class="aside__top-img" src="./images/credit-card.svg" alt="icon">
-                  <h6 class="aside__top-title">Payments</h6>
-                  <img class="aside__top-arrow" src="./images/chevron-down.svg" alt="icon">
-                </div>
-
-                <ul class="aside__accordion-list">
-                  <li class="aside__accordion-item">
-                    <a class="aside__accordion-link" href="#">Payments</a>
-                  </li>
-                  <li class="aside__accordion-item">
-                    <a class="aside__accordion-link" href="#">Payoneer</a>
-                  </li>
-                  <li class="aside__accordion-item">
-                    <a class="aside__accordion-link" href="#">Fondy</a>
-                  </li>
-                </ul>
-              </div>
           </aside>
 
           <section class="content">
             <div class="content__inner">
               <div class="content__top">
-                <div class="content__top-body">
-                  <h1 class="title content__top-title">About Service 1</h1>
+                <h1 class="title content__top-title">Main</h1>
+                <div class="content__top-search">
+                  <img class="content__top-img" src="./images/main/Search.svg" alt="Search">
+                  <input class="content__top-input" type="text" placeholder="Search">
                 </div>
               </div>
-
-              <div class="content__body">
-                <ul class="content__list">
-                  <li class="content__list-item">
-                    <div class="content__list-img">
-                      <img src="./images/about-service.jpg" alt="images">
-                    </div>
-                    <p class="content__list-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages</p>
-                  </li>
-                  <li class="content__list-item">
-                    <p class="content__list-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages</p>
-                    <div class="content__list-img">
-                      <img src="./images/about-service.jpg" alt="images">
-                    </div>
-                  </li>
-                </ul>
-  
-                <p class="content__body-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages
-                </p>
-                <a class="content__body-link" href="#">Order</a>
-
-              </div>
-
+                
             </div>
           </section>
         </div>
       </div>
     </main>
 
-    <script src="js/about-service.js"></script>
+    <script src="js/my-account.js"></script>
   </body>
 </html>

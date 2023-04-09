@@ -18,6 +18,9 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  .mobile__box {
+    display: none;
+  }
   &__box {
     display: flex;
     flex-direction: column;

@@ -171,7 +171,7 @@ body {
     display: none;
   }
   .burger {
-    z-index: 10;
+    z-index: 15;
     cursor: pointer;
   }
   .burger::after, .burger::before {
@@ -254,6 +254,9 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 20px;
+}
+.aside .mobile__box {
+  display: none;
 }
 .aside__box {
   display: -webkit-box;
