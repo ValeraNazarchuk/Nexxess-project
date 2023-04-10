@@ -155,6 +155,10 @@ body {
   .header .nav__item-link {
     padding: 10px 20px;
   }
+  .title {
+    font-size: 30px;
+    line-height: 120%;
+  }
 }
 @media (max-width: 800px) {
   .header__inner {
@@ -166,7 +170,7 @@ body {
     padding: 10px;
   }
 }
-@media (max-width: 700px) {
+@media (max-width: 750px) {
   .header__box {
     display: none;
   }

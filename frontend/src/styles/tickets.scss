@@ -119,7 +119,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 8px;
+      gap: 1px;
     }
 
     &-text {
@@ -468,8 +468,6 @@
       align-items: center;
       width: 135px;
       justify-content: center;
-    }
-    &-text {
       font-weight: 600;
       font-size: 20px;
       line-height: 150%;

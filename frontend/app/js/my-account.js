@@ -29,3 +29,15 @@ function menu() {
 
   document.body.style.overflow = overflowValue
 }
+
+let uploadButton = document.getElementById('cabinet__photo-input')
+let chosenImage = document.getElementById('cabinet__photo-img')
+
+uploadButton.onchange = () => {
+  let reader = new FileReader()
+  reader.readAsDataURL(uploadButton.files[0])
+
+  reader.onload = () => {
+    chosenImage.setAttribute('src', reader.result)
+  }
+} 

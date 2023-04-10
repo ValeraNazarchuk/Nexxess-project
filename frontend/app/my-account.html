@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NEXXESS</title>
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/my-account.css" />
   </head>
 
   <body>
@@ -126,18 +126,49 @@
               </div>
           </aside>
 
-          <section class="content">
-            <div class="content__inner">
-              <div class="content__top">
-                <h1 class="title content__top-title">Main</h1>
-                <div class="content__top-search">
-                  <img class="content__top-img" src="./images/main/Search.svg" alt="Search">
-                  <input class="content__top-input" type="text" placeholder="Search">
-                </div>
-              </div>
+            <section class="cabinet">
+              <div class="container">
+                <form class="cabinet__wrap">
+                  <div class="cabinet__photo-inner">
+                    <label class="cabinet__photo-label" title="insert a new picture">
+                      <img class="cabinet__photo-img" id="cabinet__photo-img">
+                      <input class="cabinet__photo-input" id="cabinet__photo-input" type="file" name="file" accept="image/*">
+                    </label>
+                    <p class="cabinet__photo-name">
+                      Iryna Shlapak
+                    </p>
+                  </div>
                 
-            </div>
+                  <ul class="cabinet__list">
+                    <li class="cabinet__item">
+                      <p class="cabinet__text">First name</p>
+                      <input class="cabinet__input" type="text" placeholder="First name">
+                    </li>
+                  
+                    <li class="cabinet__item">
+                      <p class="cabinet__text">Last name</p>
+                      <input class="cabinet__input" type="tel" placeholder="Last name">
+                    </li>
+                  
+                    <li class="cabinet__item">
+                      <p class="cabinet__text">Email</p>
+                      <input class="cabinet__input" type="email" placeholder="Email">
+                    </li>
+                  
+                    <li class="cabinet__item">
+                      <p class="cabinet__text">Password</p>
+                      <input class="cabinet__input" type="password" placeholder="Password">
+                    </li>
+                  </ul>
+
+                  <div class="cabinet__buttons">
+                    <button class="cabinet__buttons-save">Save</button>
+                    <button class="cabinet__buttons-delete">Delete account</button>
+                  </div>
+                </form>
+              </div>
           </section>
+          </div>
         </div>
       </div>
     </main>

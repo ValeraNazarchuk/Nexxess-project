@@ -119,7 +119,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 8px;
+      gap: 1px;
     }
 
     &-text {
@@ -295,6 +295,7 @@
     }
 
     &-input{
+      width: 100%;
       margin-left: 8px;
       font-weight: 400;
       font-size: 16px;
@@ -325,11 +326,23 @@
       align-items: center;
       width: 135px;
       justify-content: center;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 150%;
     }
   }
 
   &__body {
     position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 15px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: $bg-green;
+    }
     &-titleDate {
       position: absolute;
       top: 0;
@@ -347,15 +360,6 @@
     &-list {
       padding: 30px 0 0;
       position: relative;
-      &::before {
-        content: '';
-        position: absolute;
-        top: 15px;
-        left: 0;
-        width: 100%;
-        height: 1px;
-        background-color: $bg-green;
-      }
     }
     &-item {
       display: flex;
@@ -395,6 +399,10 @@
       line-height: 24px;
     }
   }
+
+  &__mobile {
+    display: none;
+  }
 }
 
 .style--width {
@@ -414,20 +422,85 @@
   .aside {
     max-width: 265px;
   }
+
+  .content {
+    &__titles {
+      &-item {
+        width: 105px;
+        font-size: 16px;
+        line-height: 130%;
+        white-space: nowrap;
+      }
+    }
+
+    &__body {
+      &-number {
+        left: 0;
+      }
+      &-item {
+        padding: 10px 0 10px 10px;
+      }
+    }
+  }
+
+  .style--width {
+    width: 95px;
+  }
 }
 
 @media(max-width:900px) {
   .aside {
     max-width: 225px;
+    &__accordion {
+      &-item {
+        padding: 10px;
+        gap: 2px;
+      }
+      &-select {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .content {
+    &__top {
+      &-box {
+        font-size: 16px;
+        line-height: 130%;
+      }
+
+      &-search {
+        padding: 5px;
+        max-width: 230px;
+      }
+    }
+
+    &__titles {
+      &-item {
+        width: 90px;
+        font-size: 14px;
+        line-height: 110%;
+      }
+    }
+
+    &__body {
+      &-item {
+        font-size: 14px;
+        line-height: 140%;
+      }
+      &-status {
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+  }
+
+  .style--width {
+    width: 80px;
   }
 }
 
-@media(max-width:700px) {
-
-  .content {
-    margin: 0;
-  }
-
+@media(max-width:750px) {
   .aside {
     padding: 40px 10px;
     position: fixed;
@@ -457,6 +530,9 @@
     }
   }
 
+  .content {
+    margin: 0;
+  }
 }
 
 @media(max-width:600px) {
@@ -466,12 +542,116 @@
   .aside {
     padding-top: 20px;
   }
+
+  .content {
+    &__top {
+      &-search {
+        padding: 5px;
+        max-width: 230px;
+      }
+    }
+    &__body {
+      &-item,
+      &-status {
+        font-size: 12px;
+        line-height: 130%;
+      }
+    }
+  }
 }
 
-@media(max-width:450px) {
+@media(max-width:500px) {
+  .content {
+    &__top {
+      flex-direction: column;
+      align-items: flex-start;
+      border: none;
+      &-box {
+        margin-top: 10px;
+      }
+      &-search {
+        margin: 10px 0 0;
+        align-self: start;
+      }
+    }
 
+    &__titles {
+      display: none;
+    }
+
+    &__body {
+      margin-top: 10px;
+      &-list {
+        display: none;
+      }
+    }
+
+    &__mobile {
+      display: block;
+      padding-top: 40px;
+      
+      &-box {
+        display: flex;
+        align-items: flex-start;
+        max-width: 400px;
+        margin: 0 auto;
+        justify-content: space-evenly;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 150%;
+        overflow: hidden;
+        height: 60px;
+        transition: all .5s;
+        & + & {
+          margin-top: 10px;
+        }
+      }
+
+      &-title {
+        margin-top: 5px;
+        &:first-child {
+          font-weight: 600;
+        }
+      }
+
+      
+      &-list {
+        margin: 0 20px;
+      }
+      
+      &-item  {
+        display: flex;
+        align-items: center;
+        margin-top: 3.5px;
+      }
+
+      &-status {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid $border-purple;
+        padding: 1px 7px;
+        width: 70px;
+      }
+
+      &-money {
+        color: $fs-purple;
+      }
+
+      &-btn {
+        transition: all .5s;
+      }
+      &-activeBox {
+        transition: all .5s;
+        height: 125px;
+      }
+      &-activeBtn {
+        transition: all .5s;
+        transform: rotate(-180deg);
+      }
+    }
+  }
 }
-
 
 @media(max-width:400px) {
   .aside {

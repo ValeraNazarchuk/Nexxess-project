@@ -363,10 +363,15 @@
   }
 }
 
-@media(max-width:700px) {
+@media(max-width:750px) {
 
   .content {
     margin: 0;
+    &__list {
+      &-body {
+        margin: 34px 20px 20px;
+      }
+    }
   }
 
   .aside {
@@ -413,6 +418,11 @@
         max-width: 230px;
       }
     }
+    &__list {
+      &-body {
+        margin: 15px 10px;
+      }
+    }
   }
 }
 
@@ -426,9 +436,6 @@
       align-items: center;
       &-item {
         max-width: 315px;
-      }
-      &-body {
-        margin: 15px 10px;
       }
     }
 

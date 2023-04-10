@@ -155,6 +155,10 @@ body {
   .header .nav__item-link {
     padding: 10px 20px;
   }
+  .title {
+    font-size: 30px;
+    line-height: 120%;
+  }
 }
 @media (max-width: 800px) {
   .header__inner {
@@ -166,7 +170,7 @@ body {
     padding: 10px;
   }
 }
-@media (max-width: 700px) {
+@media (max-width: 750px) {
   .header__box {
     display: none;
   }
@@ -662,9 +666,12 @@ body {
     line-height: 110%;
   }
 }
-@media (max-width: 700px) {
+@media (max-width: 750px) {
   .content {
     margin: 0;
+  }
+  .content__list-body {
+    margin: 34px 20px 20px;
   }
   .aside {
     padding: 40px 10px;
@@ -721,6 +728,9 @@ body {
     padding: 5px;
     max-width: 230px;
   }
+  .content__list-body {
+    margin: 15px 10px;
+  }
 }
 @media (max-width: 450px) {
   .content {
@@ -740,9 +750,6 @@ body {
   }
   .content__list-item {
     max-width: 315px;
-  }
-  .content__list-body {
-    margin: 15px 10px;
   }
   .content__info-number {
     font-size: 54px;
