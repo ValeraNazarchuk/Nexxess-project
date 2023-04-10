@@ -200,7 +200,7 @@ body {
       }
       &::before {
         content: '';
-        transform: translateY(4px) rotate(45deg);
+        transform: translateY(3.6px) rotate(45deg);
         background-color: $bg-purple;
       }
     }

@@ -560,7 +560,15 @@
   }
 }
 
-@media(max-width:500px) {
+@media(max-width:550px) {
+  .aside {
+    &__accordion {
+      &-date {
+        justify-content:flex-start;
+        gap: 10px;
+      }
+    }
+  }
   .content {
     &__top {
       flex-direction: column;
@@ -612,11 +620,6 @@
         &:first-child {
           font-weight: 600;
         }
-      }
-
-      
-      &-list {
-        margin: 0 20px;
       }
       
       &-item  {
