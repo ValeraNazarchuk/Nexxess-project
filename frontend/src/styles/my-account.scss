@@ -149,6 +149,10 @@
 
 .cabinet {
   margin: 0 auto;
+  &__list {
+    max-width: 450px;
+    width: 100%;
+  }
   &__wrap {
     display: flex;
     justify-content: space-between;
@@ -181,6 +185,7 @@
   }
 
   &__item {
+    width: 100%;
     &:not(:last-child) {
       margin-bottom: 20px;
     }
@@ -196,6 +201,7 @@
   }
 
   &__input {
+    width: 100%;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0.15px;
@@ -203,7 +209,7 @@
     border: 1px solid #C2C8D0;
     border-radius: 4px;
     padding: 15px 16px;
-    min-width: 420px;
+    // min-width: 420px;
 
     &:focus {
       outline-color: #7C48EE;
@@ -249,7 +255,7 @@
   }
 }
 
-@media(max-width:700px) {
+@media(max-width:750px) {
 
   .content {
     margin: 0;
@@ -291,6 +297,21 @@
   }
   .aside {
     padding-top: 20px;
+  }
+
+  .cabinet {
+    &__photo {
+      &-img {
+        width: 150px;
+        height: 150px;
+      }
+    }
+    &__buttons {
+      &-save,
+      &-delete {
+        width: 130px;
+      }
+    }
   }
 }
 
