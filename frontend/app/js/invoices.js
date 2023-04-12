@@ -50,12 +50,12 @@ function menu() {
 
 //_______MOBILE_____
 
-const mobileBox = document.querySelectorAll('.content__mobile-box')
-const mobileBtn = document.querySelectorAll('.content__mobile-btn')
+const mobileBox = document.querySelectorAll('.content__body-box')
+const mobileBtn = document.querySelectorAll('.content__body-btn')
 
 mobileBtn.forEach((button, index) => {
   button.addEventListener('click', (e) => {
-    mobileBox[index].classList.toggle('content__mobile-activeBox')
-    mobileBtn[index].classList.toggle('content__mobile-activeBtn')
+    mobileBox[index].classList.toggle('content__body-activeBox')
+    mobileBtn[index].classList.toggle('content__body-activeBtn')
   })
 })

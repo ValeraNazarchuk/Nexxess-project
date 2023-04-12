@@ -484,14 +484,13 @@
       &-item {
         flex-direction: column;
         gap: 20px;
+        padding: 15px 0;
       }
       &-img {
-        // max-width: none;
         max-width: 350px;
         width: 100%;
       }
       &-text {
-        // max-width: none;
         max-width: 350px;
         margin: 0 auto;
       }
