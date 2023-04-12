@@ -359,6 +359,7 @@
     }
     &-list {
       padding: 30px 0 0;
+      position: relative;
     }
     &-box {
       position: relative;
@@ -652,7 +653,7 @@
         justify-content: center;
         font-weight: 400;
         border: 1px solid $border-purple;
-        padding: 0px 7px;
+        padding: 1px 7px;
         width: 70px;
       }
 
