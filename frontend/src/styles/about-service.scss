@@ -267,8 +267,8 @@
       }
       &-text {
         max-width: none;
-        &:nth-child(even){
-          display: block;
+        &:nth-child(1){
+          float: left;
         }
       }
     }

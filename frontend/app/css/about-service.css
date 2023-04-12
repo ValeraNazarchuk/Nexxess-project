@@ -562,8 +562,8 @@ body {
   .content__list-text {
     max-width: none;
   }
-  .content__list-text:nth-child(even) {
-    display: block;
+  .content__list-text:nth-child(1) {
+    float: left;
   }
   .style--width {
     width: 95px;
