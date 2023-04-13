@@ -294,11 +294,13 @@
   .content {
     &__list {
       &-item {
-        // padding: 20px 0;
         display: flex;
         flex-direction: column;
         &:nth-child(even) {
           flex-direction: column;
+          .content__list-img {
+            margin: 0;
+          }
         }
       }
       &-text {
@@ -394,9 +396,6 @@
       &-item {
         font-size: 14px;
         line-height: 140%;
-      }
-      &-img {
-        margin: 0;
       }
     }
     &__body {

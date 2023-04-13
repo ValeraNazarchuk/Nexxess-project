@@ -595,6 +595,9 @@ body {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  .content__list-item:nth-child(even) .content__list-img {
+    margin: 0;
+  }
   .content__list-text {
     max-width: none;
   }
@@ -675,9 +678,6 @@ body {
   .content__list-item {
     font-size: 14px;
     line-height: 140%;
-  }
-  .content__list-img {
-    margin: 0;
   }
   .content__body {
     font-size: 14px;
