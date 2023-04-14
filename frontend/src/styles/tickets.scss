@@ -767,7 +767,7 @@
 
 @media(max-width:900px) {
   .aside {
-    max-width: 225px;
+    
     &__accordion {
       &-item {
         padding: 10px;
@@ -848,35 +848,6 @@
 }
 
 @media(max-width:750px) {
-  .aside {
-    padding: 40px 10px;
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    max-width: 315px;
-    width: 300px;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    transform: translateX(100%);
-    transition: transform 0.4s;
-    overflow: auto;
-    background-color: #fff;
-    z-index: 10;
-
-    &--active {
-      transform: translateX(0);
-    }
-    .mobile__box {
-      display: flex;
-      align-items: center;
-      &-text {
-        font-size: 16px;
-      }
-    }
-  }
-
   .content {
     margin: 0;
   }
@@ -886,10 +857,6 @@
   .main {
     margin: 30px 0;
   }
-  .aside {
-    padding-top: 20px;
-  }
-
   .content {
     &__top {
       &-search {

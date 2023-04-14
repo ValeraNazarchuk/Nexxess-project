@@ -13,10 +13,12 @@
     <header class="header">
       <div class="container">
         <div class="header__inner">
-          <picture>
-            <source srcset="./images/logo-mobile.png" media="(max-width: 600px)">
+          <a class="header__link" href="./main.html">
+            <picture class="header__logo">
+            <source srcset="./images/logo-mobile.png" media="(max-width: 550px)">
             <img src="./images/logo.png" alt="logo">
           </picture>
+          </a>
 
           <nav class="nav">
             <ul class="nav__list">
@@ -36,11 +38,15 @@
           </nav>
 
           <div class="header__box">
-            <a class="header__box-user" href="#">
+            <a class="header__box-link" href="#" title="search">
+              <img class="header__box-img" src="./images/Search.svg" alt="search">
+            </a>
+            <a class="header__box-link" href="./my-account.html" title="my account">
               <img class="header__box-img" src="./images/user.svg" alt="user">
             </a>
-            <p class="header__box-text">Hello, John John</p>
-            <a class="header__box-link" href="#">Log Out</a>
+            <a class="header__box-link" href="#" title="telegram bot">
+              <img class="header__box-img" src="./images/telegram.svg" alt="user">
+            </a>
           </div>
 
           <a class="burger">
