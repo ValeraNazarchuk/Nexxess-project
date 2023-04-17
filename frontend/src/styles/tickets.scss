@@ -11,7 +11,6 @@
   }
 }
 
-
 //______CONTENT_____
 
 .content {
@@ -22,10 +21,43 @@
   flex-direction: column;
   gap: 60px;
 
+  &__create {
+    &-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 170px;
+      width: 100%;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      background-color: #7C48EE;
+      color: #fff;
+      padding: 13px 0;
+      margin: 15px 0;
+      box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.5s;
+    }
+    &-img {
+      margin-right: 5px;
+      width: 20px;
+    }
+  }
+
   &__form {
-    margin: 10px 0 40px;
+    margin: 10px 0;
     display: flex;
     gap: 40px;
+    height: 0;
+    overflow: hidden;
+    transition: all .3s;
+
+    &--active {
+      height: 350px;
+      overflow: auto;
+    }
     &-box {
       display: flex;
       flex-direction: column;
@@ -236,6 +268,31 @@
           color: $fs-gray;
         }
       }
+    }
+  }
+
+  &__filter {
+    &-btn {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      max-width: 170px;
+      width: 100%;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      background-color: #7C48EE;
+      color: #fff;
+      padding: 13px 0;
+      margin: 15px 0;
+      box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.5s;
+    }
+    &-img {
+      margin-right: 5px;
+      width: 20px;
     }
   }
 
@@ -518,6 +575,7 @@
 }
 
 
+
 @media(max-width:1100px) {
 
 
@@ -628,6 +686,9 @@
 @media(max-width:750px) {
   .content {
     margin: 0;
+    &__filter-btn {
+      display: flex;
+    }
   }
 }
 
@@ -657,6 +718,10 @@
     gap: 40px;
     &__form {
       flex-direction: column;
+      &--active {
+        height: 580px;
+      }
+    
       &-duration {
         margin-top: 10px;
       }
@@ -791,9 +856,9 @@
   }
 }
 
-@media(max-width:450px) {
-  .aside {
-    max-width: none;
-    width: 100%;
-  }
-}
+// @media(max-width:450px) {
+//   .aside {
+//     max-width: none;
+//     width: 100%;
+//   }
+// }
