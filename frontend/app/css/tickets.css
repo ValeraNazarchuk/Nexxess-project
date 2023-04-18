@@ -779,6 +779,7 @@ body {
   max-width: 140px;
   padding: 5px 10px;
   border: 1px solid #C2C8D0;
+  letter-spacing: 0.1em;
   border-radius: 3px;
   text-align: center;
   -webkit-appearance: none;
