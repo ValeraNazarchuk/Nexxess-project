@@ -724,6 +724,9 @@
       flex-direction: column-reverse;
       height: 0;
       overflow: hidden;
+      &-duration {
+        margin: 15px 0;
+      }
       &--active {
         height: 580px;
       }

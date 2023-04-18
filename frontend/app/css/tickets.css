@@ -1782,6 +1782,9 @@ body {
     height: 0;
     overflow: hidden;
   }
+  .content__form-duration {
+    margin: 15px 0;
+  }
   .content__form--active {
     height: 580px;
   }
