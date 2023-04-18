@@ -557,7 +557,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
 }
-.aside-filter__accordion-label:hover .aside__accordion-check::before {
+.aside-filter__accordion-label:hover .aside-filter__accordion-check::before {
   border-color: #85B7F0;
 }
 .aside-filter__accordion-check {

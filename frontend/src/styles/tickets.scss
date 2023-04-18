@@ -1,5 +1,6 @@
 @import 'vars';
 @import 'global';
+@import 'calendar';
 
 
 .main {
@@ -575,7 +576,6 @@
 }
 
 
-
 @media(max-width:1100px) {
   .content {
     &__titles {
@@ -693,9 +693,7 @@
 }
 
 @media(max-width:600px) {
-  .main {
-    // margin: 30px 0;
-  }
+
   .content {
     &__top {
       &-search {
