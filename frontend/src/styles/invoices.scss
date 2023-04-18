@@ -310,6 +310,10 @@
 }
 
 @media(max-width:750px) {
+  .main {
+    padding-top: 190px;
+    margin: 0 0 30px;
+  }
   .content {
     margin: 0;
     &__filter-btn {
@@ -319,9 +323,6 @@
 }
 
 @media(max-width:600px) {
-  .main {
-    margin: 30px 0;
-  }
 
   .content {
     &__top {
@@ -334,6 +335,9 @@
 }
 
 @media(max-width:550px) {
+  .main {
+    padding-top: 160px;
+  }
   .content {
     &__top {
       flex-direction: column;

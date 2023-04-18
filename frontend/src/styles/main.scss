@@ -220,9 +220,7 @@
 }
 
 @media(max-width:900px) {
-  .aside {
-    // max-width: 225px;
-  }
+
   .content {
     &__list {
       gap: 10px;
@@ -250,6 +248,10 @@
 }
 
 @media(max-width:750px) {
+  .main {
+    padding-top: 190px;
+    margin: 0 0 30px;
+  }
   .content {
     margin: 0;
     &__top {
@@ -268,9 +270,6 @@
 }
 
 @media(max-width:600px) {
-  .main {
-    margin: 30px 0;
-  }
   .content {
     &__top {
       &-search {
@@ -287,6 +286,9 @@
 }
 
 @media(max-width:450px) {
+  .main {
+    padding-top: 160px;
+  }
   .content {
     width: 100%;
     
