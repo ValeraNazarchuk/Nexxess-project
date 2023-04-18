@@ -62,13 +62,12 @@ burger.addEventListener('click', menu)
 function menu() {
   if (burger.classList.contains('burger-filter--active')) {
     burger.classList.remove('burger-filter--active')
-    asidefilter.classList.toggle('aside-filter--active')
+    asidefilter.classList.remove('aside-filter--active')
     document.body.classList.remove('body--active')
     return
   }
 
   burger.classList.toggle('burger--active')
-  asidefilter.classList.remove('aside-filter--active')
   asideInfo.classList.toggle('aside-info--active')
 
   if (
@@ -81,14 +80,13 @@ function menu() {
   }
 }
 
-//_______FILTER______
+//_____FILTER____
 
 filterBtn.addEventListener('click', filters)
 
 function filters() {
-  burger.classList.toggle('burger-filter--active')
-  asideInfo.classList.remove('aside-info--active')
-  asidefilter.classList.toggle('aside-filter--active')
+  burger.classList.add('burger-filter--active')
+  asidefilter.classList.add('aside-filter--active')
 
   if (document.body.classList.contains('body--active')) {
     document.body.classList.remove('body--active')
