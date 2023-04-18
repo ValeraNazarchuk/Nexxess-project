@@ -62,11 +62,14 @@ function menu() {
   asidefilter.classList.remove('aside-filter--active')
   asideInfo.classList.toggle('aside-info--active')
 
-  if (document.body.classList.contains('body--active')) {
-    document.body.classList.remove('body--active')
-  } else {
-    document.body.classList.add('body--active')
-  }
+    if (
+      document.body.classList.contains('body--active') &&
+      !burger.classList.contains('burger--active')
+    ) {
+      document.body.classList.remove('body--active')
+    } else {
+      document.body.classList.add('body--active')
+    }
 }
 
 //_______FILTER______
