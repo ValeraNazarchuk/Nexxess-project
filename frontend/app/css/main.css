@@ -1047,7 +1047,7 @@ body {
     margin: 15px 10px;
   }
 }
-@media (max-width: 450px) {
+@media (max-width: 550px) {
   .main {
     padding-top: 160px;
   }
@@ -1067,7 +1067,7 @@ body {
             align-items: center;
   }
   .content__list-item {
-    max-width: 315px;
+    max-width: 345px;
   }
   .content__info-number {
     font-size: 54px;

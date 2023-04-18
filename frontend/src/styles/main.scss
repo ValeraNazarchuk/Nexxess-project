@@ -285,7 +285,7 @@
   }
 }
 
-@media(max-width:450px) {
+@media(max-width:550px) {
   .main {
     padding-top: 160px;
   }
@@ -297,10 +297,10 @@
       flex-direction: column;
       align-items: center;
       &-item {
-        max-width: 315px;
+        max-width: 345px;
       }
     }
-
+  
     &__info-number {
       font-size: 54px;
       line-height: 48px;
