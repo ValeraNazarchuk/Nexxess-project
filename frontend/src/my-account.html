@@ -143,42 +143,72 @@
           </aside>
 
             <section class="cabinet">
-              <!-- <div class="container"> -->
-                <form class="cabinet__wrap">
-                  <div class="cabinet__photo-inner">
-                    <label class="cabinet__photo-label" title="insert a new picture">
-                      <img class="cabinet__photo-img" id="cabinet__photo-img">
-                      <input class="cabinet__photo-input" id="cabinet__photo-input" type="file" name="file" accept="image/*">
-                    </label>
-                    <p class="cabinet__photo-name">
-                      Iryna Shlapak
-                    </p>
-                  </div>
+              <form id="cabinet__info" class="cabinet__info">
+                <div class="cabinet__info-inner">
+                <!-- <label class="cabinet__info-label" title="insert a new picture"> -->
+                  <img class="cabinet__info-img" src="./images/profile-user.png" alt="your photo">
+                  <!-- <input class="cabinet__info-file" id="cabinet__info-file" type="file" name="file" accept="image/*"> -->
+                <!-- </label> -->
+              </div>
                 
-                  <ul class="cabinet__list">
-                    <li class="cabinet__item">
-                      <p class="cabinet__text">Username</p>
-                      <input class="cabinet__input" type="text" placeholder="Iryna" disabled>
-                    </li>
+              <ul class="cabinet__info-list">
+                <li class="cabinet__info-item">
+                  <p class="cabinet__info-text">Username</p>
+                  <input class="cabinet__info-input" type="text" placeholder="Pasha Karvatskiy" disabled>
+                </li>
                   
-                    <li class="cabinet__item">
-                      <p class="cabinet__text">Email</p>
-                      <input class="cabinet__input" type="email" placeholder="Shlapak" disabled>
-                    </li>
+                <li class="cabinet__info-item">
+                  <p class="cabinet__info-text">Email</p>
+                  <input class="cabinet__info-input" type="email" placeholder="pashakarvatskiy@gmail.com" disabled>
+                </li>
+              
+                <li class="cabinet__info-item">
+                  <p class="cabinet__info-text">Password</p>
+                  <input class="cabinet__info-input" type="password" placeholder="******" disabled>
+                </li>
+              </ul>
+
+              <div class="cabinet__info-buttons">
+                <button id="cabinet__btn-edit" class="cabinet__info-button" type="button">Edit</button>
+                <button class="cabinet__info-button" type="button">Log out</button>
+              </div>
+            </form>
+
+              <form id="cabinet__edit" class="cabinet__edit">
+                <div class="cabinet__edit-inner">
+                <label class="cabinet__edit-label" title="insert a new picture">
+                  <img class="cabinet__edit-img" id="cabinet__edit-img">
+                  <input class="cabinet__edit-file" id="cabinet__edit-file" type="file" name="file" accept="image/*">
+                </label>
+              </div>
+                
+              <ul class="cabinet__edit-list">
+                <li class="cabinet__edit-item">
+                  <p class="cabinet__edit-text">Username</p>
+                  <input class="cabinet__edit-input" type="text" placeholder="Enter Username">
+                </li>
                   
-                    <li class="cabinet__item">
-                      <p class="cabinet__text">Password</p>
-                      <input class="cabinet__input" type="password" placeholder="******" disabled>
-                    </li>
+                <li class="cabinet__edit-item">
+                  <p class="cabinet__edit-text">Email</p>
+                  <input class="cabinet__edit-input" type="email" placeholder="Enter email">
+                </li>
+              
+                <li class="cabinet__edit-item">
+                  <p class="cabinet__edit-text">Current password</p>
+                  <input class="cabinet__edit-input" type="password" placeholder="Enter password">
+                </li>
 
-                  </ul>
+                <li class="cabinet__edit-item">
+                  <p class="cabinet__edit-text">New Password</p>
+                  <input class="cabinet__edit-input" type="password" placeholder="Enter password">
+                </li>
+              </ul>
 
-                  <div class="cabinet__buttons">
-                    <button class="cabinet__buttons-save" type="button">Edit</button>
-                    <button class="cabinet__buttons-delete" type="button">Log out</button>
-                  </div>
-                </form>
-              <!-- </div> -->
+              <div class="cabinet__edit-buttons">
+                <button class="cabinet__edit-button" type="submit">Save</button>
+                <button id="cabinet__btn-cancel" class="cabinet__edit-button" type="button">Cancel</button>
+              </div>
+            </form>
           </section>
           </div>
         </div>

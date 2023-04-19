@@ -30,8 +30,30 @@ function menu() {
   }
 }
 
-let uploadButton = document.getElementById('cabinet__photo-input')
-let chosenImage = document.getElementById('cabinet__photo-img')
+//_____
+
+//-Forms
+const infoForm = document.querySelector('#cabinet__info')
+const editForm = document.querySelector('#cabinet__edit')
+
+//-Buttons
+const editBtn = document.querySelector('#cabinet__btn-edit')
+const cancelBtn = document.querySelector('#cabinet__btn-cancel')
+
+editBtn.addEventListener('click', () => {
+  infoForm.style.display = 'none'
+  editForm.style.display = 'flex'
+})
+
+cancelBtn.addEventListener('click', () => {
+  editForm.style.display = 'none'
+  infoForm.style.display = 'flex'
+})
+
+
+//______PHOTO____
+let uploadButton = document.getElementById('cabinet__edit-file')
+let chosenImage = document.getElementById('cabinet__edit-img')
 
 uploadButton.onchange = () => {
   let reader = new FileReader()
