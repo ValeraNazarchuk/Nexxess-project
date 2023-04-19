@@ -52,8 +52,8 @@ cancelBtn.addEventListener('click', () => {
 
 
 //______PHOTO____
-let uploadButton = document.getElementById('cabinet__edit-file')
-let chosenImage = document.getElementById('cabinet__edit-img')
+let uploadButton = document.querySelector('#cabinet__edit-file')
+let chosenImage = document.querySelector('#cabinet__edit-img')
 
 uploadButton.onchange = () => {
   let reader = new FileReader()
