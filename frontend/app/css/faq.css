@@ -876,6 +876,103 @@ body {
 .content__top-input:focus::placeholder {
   color: #858585;
 }
+.content__list {
+  margin-top: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+.content__item-title {
+  position: relative;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
+  color: #fff;
+  padding: 12px 40px 12px 16px;
+  background-color: #312D3A;
+  border-radius: 4px;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.content__item-title::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-30%);
+      -ms-transform: translateY(-30%);
+          transform: translateY(-30%);
+  right: 11px;
+  width: 20px;
+  height: 1px;
+  background-color: #fff;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.content__item-title::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 20px;
+  width: 0.8px;
+  height: 20px;
+  background-color: #fff;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.content__item-title:hover {
+  background-color: #D9CC46;
+  color: #312D3A;
+}
+.content__item-title:hover::after, .content__item-title:hover::before {
+  background-color: #312D3A;
+}
+.content__item-box {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px 40px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+  -webkit-transition: display 0.2s;
+  -o-transition: display 0.2s;
+  transition: display 0.2s;
+}
+.content__item-text {
+  margin-bottom: 15px;
+}
+.content__item-video {
+  max-width: 650px;
+}
+.content__item--active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.content__title--active {
+  background-color: #7C48EE;
+}
+.content__title--active::after {
+  display: none;
+}
 
 @media (max-width: 750px) {
   .main {

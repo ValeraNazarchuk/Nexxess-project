@@ -240,6 +240,14 @@
     cursor: pointer;
   }
 
+  &-link {
+    color: $fs-purple;
+    transition: all .5s;
+    &:hover {
+      color: $fs-blue;
+    }
+  }
+
   &-buttons {
     display: flex;
     flex-direction: column;
