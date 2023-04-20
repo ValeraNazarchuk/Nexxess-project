@@ -48,7 +48,7 @@
   }
 
   &__form {
-    margin: 10px 0;
+    margin: 10px 0 30px;
     display: flex;
     gap: 40px;
     transition: all .3s;
@@ -730,6 +730,7 @@
       }
     }
     &__form {
+      margin: 10px 0;
       flex-direction: column-reverse;
       height: 0;
       overflow: hidden;
