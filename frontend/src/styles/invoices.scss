@@ -1,6 +1,7 @@
 @import 'vars';
 @import 'global';
 @import 'calendar';
+@import 'pagination';
 
 
 .main {
@@ -238,8 +239,6 @@
   display: flex;
   justify-content: center;
 }
-
-
 
 
 //______MEDIA_______

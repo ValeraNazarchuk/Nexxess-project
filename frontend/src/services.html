@@ -167,7 +167,7 @@
                   <p class="content__list-text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
                   <div class="content__list-box">
                     <p class="content__list-price">$100</p>
-                    <a class="content__list-link" href="#">Order</a>
+                    <a class="content__list-link" href="./about-service.html">Order</a>
                   </div>
                 </li>
 
@@ -181,7 +181,7 @@
                   <p class="content__list-text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
                   <div class="content__list-box">
                     <p class="content__list-price">$200</p>
-                    <a class="content__list-link" href="#">Order</a>
+                    <a class="content__list-link" href="./about-service.html">Order</a>
                   </div>
                 </li>
 
@@ -195,16 +195,39 @@
                   <p class="content__list-text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
                   <div class="content__list-box">
                     <p class="content__list-price">$300</p>
-                    <a class="content__list-link" href="#">Order</a>
+                    <a class="content__list-link" href="./about-service.html">Order</a>
                   </div>
                 </li>
               </ul>
+
+              <div class="content__pagination">
+                <button id="prev" class="content__pagination-arrow" disabled="">
+                  <svg width="46" height="46" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M14.021 6.912a.69.69 0 0 1 0 .976L9.91 12l4.112 4.112a.69.69 0 0 1-.976.976l-4.6-4.6a.69.69 0 0 1 0-.976l4.6-4.6a.69.69 0 0 1 .976 0Z" clip-rule="evenodd"></path>
+                  </svg>
+                </button>
+
+                <div class="content__pagination-buttons">
+                  <button class="content__pagination-button pagination--active" type="button">1</button>
+                  <button class="content__pagination-button" type="button">2</button>
+                  <button class="content__pagination-button" type="button">3</button>
+                  <button class="content__pagination-button" type="button">4</button>
+                  <button class="content__pagination-button" type="button">5</button>
+                </div>
+
+                <button id="next" class="content__pagination-arrow">
+                  <svg width="46" height="46" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M9.979 6.912a.69.69 0 0 1 .976 0l4.6 4.6a.69.69 0 0 1 0 .976l-4.6 4.6a.69.69 0 1 1-.976-.976L14.091 12 9.98 7.888a.69.69 0 0 1 0-.976Z" clip-rule="evenodd"></path>
+                  </svg>
+                </button>
+            </div>
             </div>
           </section>
         </div>
       </div>
     </main>
 
+    <script src="js/pagination.js"></script>
     <script src="js/services.js"></script>
   </body>
 </html>
