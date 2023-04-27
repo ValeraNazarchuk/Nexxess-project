@@ -420,6 +420,11 @@ body {
   }
 }
 
+.header__link--active {
+  background-color: $bg-purple;
+  color: $fs-white;
+}
+
 .accordion__top--active {
   border-color: $border-blue;
 }

@@ -642,6 +642,11 @@ body {
   color: #7C48EE;
 }
 
+.header__link--active {
+  background-color: #7C48EE;
+  color: #fff;
+}
+
 .accordion__top--active {
   border-color: #85B7F0;
 }

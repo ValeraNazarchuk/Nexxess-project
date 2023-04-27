@@ -18,15 +18,17 @@
   &__info,
   &__edit {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
+    &-box{
+      display: flex;
+    }
 
   &-inner {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 10px;
+    margin: 0 30px;
   }
 
   &-label {
@@ -67,7 +69,7 @@
   }
 
   &-input {
-    width: 100%;
+    width: 400px;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0.15px;
@@ -81,6 +83,7 @@
   }
 
   &-buttons {
+    grid-area: 2 / 1 / 3 / 3;
     margin: 20px auto 0;
   }
   &-button {
@@ -102,32 +105,73 @@
   }
   &__edit {
     display: none;
-    // visibility: hidden;
   }
+
 }
 
 //_________MEDIA________
 
 @media(max-width:1100px) {
-
+  .cabinet {
+  &__info,
+  &__edit {
+    &-input {
+      width: 350px;
+    }
+  }
+}
 }
 
 @media(max-width:900px) {
-
+  .cabinet {
+    &__info,
+    &__edit {
+      &-box {
+        flex-direction: column;
+      }
+      &-inner {
+        margin-bottom: 20px;
+      }
+      &-input {
+        width: 330px;
+      }
+    }
+  }
 }
+
 
 @media(max-width:750px) {
   .main {
     padding-top: 190px;
     margin: 0 0 30px;
   }
-  .content {
-    margin: 0;
+  .cabinet {
+    margin: 0 auto;
+    &__info,
+    &__edit {
+      &-inner {
+        margin-bottom: 0px;
+      }
+      &-box {
+        flex-direction: row;
+      }
+    }
   }
 }
 
 @media(max-width:600px) {
   .cabinet {
+    margin: 0 auto;
+    &__edit,
+    &__info {
+      &-inner {
+        margin: 0;
+        margin-right: 20px;
+      }
+      &-input {
+        width: 310px;
+      }
+    }
     &__photo {
       &-img {
         width: 150px;
@@ -146,5 +190,17 @@
 @media(max-width:550px) {
   .main {
     padding-top: 160px;
+  }
+
+  .cabinet {
+    &__edit,
+    &__info {
+      &-inner {
+        margin-bottom: 20px;
+      }
+      &-box {
+        flex-direction: column;
+      }
+    }
   }
 }
