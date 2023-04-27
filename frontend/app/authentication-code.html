@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEXXESS</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/authentication.css">
+</head>
+
+<body>
+
+  <main>
+    <section class="authentication">
+      <div class="authentication__body">
+
+        <form class="authentication__email" action="">
+          <div id="authentication__email-code" class="authentication__email-code">
+            <div class="authentication__email-img">
+              <img src="./images/authentication/security.svg" alt="images">
+            </div>
+            <div class="authentication__email-box authentication__box-titles">
+              <h5 class="authentication__box-title">Enter your password</h5>
+              <p class="authentication__box-subtitle authentication__email-subtitle">We sent a code to <span id="authentication__box-span" class="authentication__box-span">markishere@gmail.com</span></p>
+            </div>
+            <div class="authentication__box">
+              <input id="authentication__code-input" class="authentication__box-input" type="password" required="">
+              <label class="authentication__box-label">Password</label>
+              <div id="authentication__code-error" class="authentication__code-error"><img src="./images/authentication/error_icon.svg" alt="error"> Incorrect verification password</div>
+            </div>
+            <button id="authentication__email-button" class="authentication__button authentication__email-button" type="button">Verify my account</button>
+            <div class="authentication__email-bottom">
+              <p class="authentication__email-text">Haven't received it?</p>
+              <button class="authentication__email-btn" type="button">Resend a new link</button>
+          </div>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- <script src="js/authentication.js"></script> -->
+</body>
+
+</html>
