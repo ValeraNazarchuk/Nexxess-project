@@ -4,15 +4,6 @@
 @import 'pagination';
 
 
-.main {
-  margin: 30px 0 70px;
-  &__inner {
-    display: flex;
-    justify-content: space-between;
-    overflow: hidden;
-  }
-}
-
 //______CONTENT_____
 
 .content {
@@ -322,10 +313,6 @@
 }
 
 @media(max-width:750px) {
-  .main {
-    padding-top: 190px;
-    margin: 0 0 30px;
-  }
   .content {
     margin: 0;
     &__filter-btn {

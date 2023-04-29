@@ -1,5 +1,17 @@
 'use strict'
 
+// _____Event click on the header icon___
+
+const headerIcon = document.querySelectorAll('.header__box-icon')[0]
+const headerLinks = document.querySelector('.header__box-links')
+
+headerIcon.addEventListener('click', (e) => {
+  e.preventDefault()
+  headerLinks.classList.toggle('header__box--active')
+})
+
+//______ACCORDION______
+
 const accordionInfoBtn = document.querySelectorAll('#aside-info__accordion-top')
 const accordionInfoList = document.querySelectorAll(
   '.aside-info__accordion-list'

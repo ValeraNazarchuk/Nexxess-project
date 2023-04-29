@@ -401,9 +401,7 @@
   margin: 75px 35px 140px;
 }
 .authentication__email-code {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;

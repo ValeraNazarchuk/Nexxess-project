@@ -55,17 +55,18 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 40px 0 20px;
-    position: relative;
-    &::before {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 1px;
-      background-color: $bg-gray;
-    }
+    padding: 40px 0 30px;
+    border-bottom: 1px solid $border-gray;
+    // position: relative; 
+    // &::before {
+    //   content: '';
+    //   position: absolute;
+    //   bottom: 0;
+    //   left: 0;
+    //   width: 100%;
+    //   height: 1px;
+    //   background-color: $bg-gray;
+    // }
   }
 
   .nav {
@@ -101,8 +102,9 @@ body {
     display: flex;
     align-items: center;
     gap: 5px;
+    position: relative;
 
-    &-link {
+    &-icon {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -115,6 +117,41 @@ body {
       width: 35px;
       height: 35px;
     }
+
+    &-links {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+      border: 1px solid #C2C8D0;
+      padding: 5px 10px;
+      font-size: 14px;
+      line-height: 19px;
+      letter-spacing: 1.3px;
+      border-radius: 4px;
+      top: 33px;
+      right: 0px;
+      background-color: #fff;
+    }
+    &-link {
+      white-space: nowrap;
+      transition: all .5s;
+      &:hover {
+        color: $fs-purple;
+      }
+    }
+    .header__box--active {
+      display: flex;
+    }
+  }
+}
+
+.main {
+  margin: 30px 0 70px;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
   }
 }
 
@@ -496,7 +533,7 @@ body {
 
   .header {
     &__inner {
-      padding: 20px 0;
+      padding: 20px 0 30px;
     }
     .nav {
       &__item {
@@ -534,6 +571,13 @@ body {
     &__box {
       grid-area: 1 / 3 / 2 / 4;
       justify-content: flex-end;
+
+      &-links {
+        padding: 10px;
+        font-size: 16px;
+        gap: 10px;
+        line-height: 20px;
+      }
     }
 
 
@@ -594,6 +638,11 @@ body {
       }
     }
 
+    .main {
+      padding-top: 190px;
+      margin: 0 0 30px;
+    }
+
     .aside {
       width: 0;
       &-info,
@@ -642,6 +691,10 @@ body {
         height: 30px;
       }
     }
+  }
+
+  .main {
+    padding-top: 160px;
   }
 
   .aside {
