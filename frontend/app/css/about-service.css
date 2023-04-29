@@ -1002,9 +1002,6 @@ body {
   }
 }
 @media (max-width: 550px) {
-  .main {
-    padding-top: 160px;
-  }
   .content {
     gap: 40px;
   }

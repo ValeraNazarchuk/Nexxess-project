@@ -2254,9 +2254,6 @@ body {
   }
 }
 @media (max-width: 550px) {
-  .main {
-    padding-top: 160px;
-  }
   .content__top {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;

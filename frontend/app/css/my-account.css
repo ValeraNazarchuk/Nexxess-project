@@ -988,9 +988,6 @@ body {
   }
 }
 @media (max-width: 550px) {
-  .main {
-    padding-top: 160px;
-  }
   .cabinet__edit-inner, .cabinet__info-inner {
     margin-bottom: 20px;
   }
