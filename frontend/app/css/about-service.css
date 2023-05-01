@@ -964,32 +964,6 @@ body {
     max-width: 265px;
   }
 }
-@media (max-width: 900px) {
-  .content__list-item {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .content__list-item:nth-child(even) {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .content__list-item:nth-child(even) .content__list-img {
-    margin: 0;
-  }
-  .content__list-text {
-    max-width: none;
-  }
-  .content__body-text {
-    max-width: none;
-  }
-}
 @media (max-width: 750px) {
   .main {
     padding-top: 190px;
