@@ -548,6 +548,33 @@ body {
   color: #7C48EE;
 }
 
+.error {
+  position: fixed;
+  top: 30px;
+  right: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 14px;
+  line-height: 18px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px 30px;
+  border: 1px solid #C2C8D0;
+  border-radius: 10px;
+}
+.error__img {
+  width: 20px;
+  margin-right: 5px;
+}
+.error__close {
+  position: absolute;
+  top: 3px;
+  right: 6px;
+}
+
 .header__link--active {
   background-color: #7C48EE;
   color: #fff;
@@ -861,28 +888,21 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  gap: 20px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
   padding: 20px 30px;
 }
-.content__list-item:nth-child(even) {
-  background-color: #F2F2F2;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
-}
-.content__list-img {
-  max-width: 340px;
-  min-width: 220px;
-}
-.content__list-img img {
+.content__list-video {
   width: 100%;
+  max-width: 590px;
 }
 .content__list-text {
-  max-width: 500px;
+  margin-top: 20px;
 }
 .content__body {
   display: -webkit-box;
@@ -943,25 +963,6 @@ body {
   .aside {
     max-width: 265px;
   }
-  .content__list-item {
-    padding: 20px 10px;
-    display: block;
-  }
-  .content__list-item:nth-child(even) .content__list-img {
-    float: right;
-    margin-right: 0;
-    margin-left: 20px;
-  }
-  .content__list-img {
-    float: left;
-    margin-right: 20px;
-  }
-  .content__list-text {
-    max-width: none;
-  }
-  .style--width {
-    width: 95px;
-  }
 }
 @media (max-width: 900px) {
   .content__list-item {
@@ -988,9 +989,6 @@ body {
   .content__body-text {
     max-width: none;
   }
-  .style--width {
-    width: 80px;
-  }
 }
 @media (max-width: 750px) {
   .main {
@@ -1006,11 +1004,16 @@ body {
     gap: 40px;
   }
   .content__list-item {
+    padding: 10px;
     font-size: 14px;
     line-height: 140%;
   }
   .content__body {
     font-size: 14px;
     line-height: 140%;
+  }
+  .content__body-link {
+    margin-top: 10px;
+    max-width: 155px;
   }
 }
