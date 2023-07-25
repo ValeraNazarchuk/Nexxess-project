@@ -30,7 +30,6 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
           # в значение GITHUB_TOKEN помещается ссылка на ваш секрет в репозитории
-          # в данном случае его название KEY
           GITHUB_TOKEN: ${{ secrets.SECRET1 }}
           BRANCH: gh-pages
           FOLDER: frontend/app
