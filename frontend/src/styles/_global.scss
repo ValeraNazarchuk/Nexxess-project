@@ -456,6 +456,30 @@ body {
   }
 }
 
+.error {
+  position: fixed;
+  top: 30px;
+  right: 20px;
+  background-color: rgb(255 255 255 / 90%);;
+  display: flex;
+  font-size: 14px;
+  line-height: 18px;
+  align-items: center;
+  padding: 15px 30px;
+  border: 1px solid $border-gray;
+  border-radius: 10px;
+  &__img {
+    width: 20px;
+    margin-right: 5px;
+  }
+
+  &__close {
+    position: absolute;
+    top: 3px;
+    right: 6px;
+  }
+}
+
 .header__link--active {
   background-color: $bg-purple;
   color: $fs-white;

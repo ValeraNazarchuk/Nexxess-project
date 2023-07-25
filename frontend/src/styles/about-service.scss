@@ -19,35 +19,25 @@
   &__list {
     display: flex;
     flex-direction: column;
-    // gap: 20px;
-
     
     &-item {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 20px;
+      flex-direction: column;
       font-weight: 400;
       font-size: 16px;
       line-height: 150%;
       padding: 20px 30px;
-
-      &:nth-child(even) {
-        background-color: $bg-gray-light;
-        flex-direction: row-reverse;
-      }
     }
 
-    &-img {
-      max-width: 340px;
-      min-width: 220px;
-      img {
-        width: 100%;
-      }
+    &-video {
+      width: 100%;
+      max-width: 590px;
     }
 
     &-text {
-      max-width: 500px;
+      margin-top: 20px;
     }
   }
   &__body {
@@ -102,62 +92,6 @@
   .aside {
     max-width: 265px;
   }
-
-  .content {
-    &__list {
-      &-item {
-        padding: 20px 10px;
-        display: block;
-        &:nth-child(even) {
-          .content__list-img {
-            float: right;
-            margin-right: 0;
-            margin-left: 20px;
-          }
-        }
-      }
-      &-img {
-        float: left;
-        margin-right: 20px;
-      }
-      &-text {
-        max-width: none;
-      }
-    }
-  }
-  .style--width {
-    width: 95px;
-  }
-}
-
-@media(max-width:900px) {
-
-  .content {
-    &__list {
-      &-item {
-        display: flex;
-        flex-direction: column;
-        &:nth-child(even) {
-          flex-direction: column;
-          .content__list-img {
-            margin: 0;
-          }
-        }
-      }
-      &-text {
-        max-width: none;
-      }
-    }
-    &__body {
-      &-text {
-        max-width: none;
-      }
-    }
-  }
-
-  .style--width {
-    width: 80px;
-  }
 }
 
 @media(max-width:750px) {
@@ -170,15 +104,13 @@
   }
 }
 
-@media(max-width:600px) {
-
-}
 
 @media(max-width:550px) {
   .content {
     gap: 40px;
     &__list {
       &-item {
+        padding: 10px;
         font-size: 14px;
         line-height: 140%;
       }
@@ -186,6 +118,10 @@
     &__body {
       font-size: 14px;
       line-height: 140%;
+      &-link {
+        margin-top: 10px;
+        max-width: 155px;
+      }
     } 
   }
 }

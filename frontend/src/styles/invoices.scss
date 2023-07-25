@@ -1,5 +1,5 @@
 @import 'vars';
-@import 'global';
+// @import 'global';
 @import 'calendar';
 @import 'pagination';
 
@@ -134,8 +134,14 @@
       &:hover {
         background-color: #ebebeb;
       }
-
     }
+
+    &-about {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+
     &-items {
       padding: 10px 0;
       display: flex;

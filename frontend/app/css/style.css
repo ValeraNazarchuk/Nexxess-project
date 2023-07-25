@@ -678,6 +678,33 @@ body {
   color: #7C48EE;
 }
 
+.error {
+  position: fixed;
+  top: 30px;
+  right: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 14px;
+  line-height: 18px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px 30px;
+  border: 1px solid #C2C8D0;
+  border-radius: 10px;
+}
+.error__img {
+  width: 20px;
+  margin-right: 5px;
+}
+.error__close {
+  position: absolute;
+  top: 3px;
+  right: 6px;
+}
+
 .header__link--active {
   background-color: #7C48EE;
   color: #fff;

@@ -1,0 +1,71 @@
+@import 'vars';
+// @import 'global';
+
+
+//___________CONTENT________
+
+.content {
+  display: flex;
+  // justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  &__text {
+    max-width: 875px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+    &__pay {
+    display: flex;
+    margin-top: 20px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 13px 40px;
+    background-color: $bg-purple;
+    border: 2px solid transparent;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+    color: $fs-white;
+    transition: all 0.5s;
+    &:hover {
+      background-color: transparent;
+      color: $fs-purple;
+      border-color: $border-purple;
+    }
+  }
+}
+
+//_________MEDIA________
+
+@media(max-width:750px) {
+
+  .header__inner {
+    display: flex;
+  }
+
+  .main {
+    padding-top: 140px;
+  }
+
+  .content {
+    margin: 0;
+  }
+
+}
+
+@media(max-width:600px) {
+  .content {
+  }
+}
+
+@media(max-width:550px) {
+  .content {
+    width: 100%;
+    &__text {
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+}

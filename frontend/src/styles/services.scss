@@ -1,7 +1,6 @@
 @import 'vars';
-@import 'global';
+// @import 'global';
 @import 'pagination';
-
 
 //______CONTENT_____
 
@@ -71,7 +70,8 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-
+    list-style: auto !important;
+    
     &-item {
       display: flex;
       // align-items: center;
