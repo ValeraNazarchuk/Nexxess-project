@@ -644,7 +644,7 @@ body {
 }
 @media (max-width: 800px) {
   .header__inner {
-    padding: 20px 0 30px;
+    padding: 20px 0 20px;
   }
   .header .nav__item-link {
     font-size: 14px;
